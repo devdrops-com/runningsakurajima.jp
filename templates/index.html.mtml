@@ -1,0 +1,128 @@
+<!DOCTYPE html><$mt:Include module="config"$>
+<html lang="<$mt:BlogLanguage$>" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="<$mt:PublishCharset$>">
+<title><$mt:BlogName encode_html="1"$></title>
+<meta name="description" content="<$mt:BlogDescription remove_html="1" encede_html="1"$>">
+<meta name="keywords" content="<$mt:GetVar name="metakeywords"$>">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="<$mt:BlogURL encode_html="1"$>images/favicon.ico">
+<link rel="start" href="<$mt:BlogURL encode_html="1"$>">
+<$mt:CanonicalLink$>
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="<$mt:BlogLanguage setvar="blog_lang"$><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><$mt:Var name="blog_lang"$></mt:If>">
+<meta property="og:title" content="<$mt:BlogName encode_html="1"$>">
+<meta property="og:url" content="<$mt:BlogURL encode_html="1"$>">
+<meta property="og:description" content="<$mt:BlogDescription remove_html="1" encede_html="1"$>">
+<meta property="og:site_name" content="<$mt:BlogName encode_html="1"$>">
+<meta property="og:image" content="<$mt:BlogURL encode_html="1"$>images/ogimage.jpg">
+<!-- Microdata -->
+<meta itemprop="description" content="<$mt:BlogDescription remove_html="1" encede_html="1"$>">
+<link itemprop="url" href="<$mt:BlogURL encode_html="1"$>">
+<link itemprop="image" href="<$mt:BlogURL encode_html="1"$>images/ogimage.jpg">
+<$mt:Include module="common_stylesheet"$>
+<$mt:Include module="common_head_js"$>
+</head>
+
+<mt:SetVarBlock name="thispage">TOP</mt:SetVarBlock>
+<mt:SetVarBlock name="entrycount"><$mt:EntriesCount$></mt:SetVarBlock>
+
+<body id="sitetop">
+<script>
+(function() {
+  var id = location.hash.replace('#', '');
+  if (id) {
+    var div = document.createElement('div'),
+      a = document.createElement('a');
+    a.setAttribute('name', id);
+    div.appendChild(a);
+    document.write(div.innerHTML);
+  }
+})();
+</script>
+<$mt:Include module="header"$>
+
+<section id="mainvisual" id="top">
+  <div class="container">
+  <h2><img src="<$mt:BlogURL encode_html="1"$>images/main-img.png" alt="ロゴ画像"></h2>
+  <p id="main-text">MovableType.netデザインテーマ「One Page」のデモサイトです！<br />「One Page」は1ページ完結＋ニュース更新が可能なレスポンシブウェブデザインを採用したテーマです。<br />各ページのメイン画像もカスタムフィールドで簡単に設定することができます。</p>
+  </div>
+</section>
+
+<mt:Pages sort_order="ascend">
+<mt:SetVarBlock name="iposition"><mt:CustomFieldValue identifier="imageposition" /></mt:SetVarBlock>
+<section class="webpages" id="<$mt:PageBasename$>"<mt:If name="__even__"> pageeven</mt:If>" <mt:If name="iposition" eq="背景全体に配置"><mt:If tag="CustomFieldValue" identifier="pageimage"> style="position: relative; background: url('<mt:CustomFieldAsset identifier="pageimage"><$mt:AssetURL$></mt:CustomFieldAsset>')  no-repeat scroll center 30% / cover ;"</mt:If></mt:If>>
+          <mt:If name="iposition" eq="上に配置">
+          <mt:If tag="CustomFieldValue" identifier="pageimage">
+          <div class="pageimage top" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><$mt:AssetURL$></mt:CustomFieldAsset>');"></div>
+          </mt:If>
+          </mt:If>
+  <div class="container<mt:If name="iposition" eq="上に配置"> image-top</mt:If>">
+    <h3><$mt:PageTitle encode_html="1"$></h3>
+    <div class="row">
+      <div class="col-sm-12">
+      <$mt:PageBody$>
+      <$mt:PageMore$>
+      </div>
+    </div>
+  </div>
+          <mt:If name="iposition" eq="下に配置">
+          <mt:If tag="CustomFieldValue" identifier="pageimage">
+          <div class="pageimage bottom" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><$mt:AssetURL$></mt:CustomFieldAsset>');"></div>
+          </mt:If>
+          </mt:If>
+</section>
+</mt:Pages>
+
+<mt:If name="entrycount" gt="0">
+<section id="top-news">
+  <div class="container">
+    <h3>ニュース</h3>
+    <div class="row">
+    <mt:Entries lastn="4">
+      <a href="<$mt:EntryPermalink$>" class="col-sm-3">
+        <mt:If tag="CustomFieldValue" identifier="main_image_entry">
+           <figure><img src="<mt:CustomFieldAsset identifier="main_image_entry"><$mt:AssetThumbnailURL width="320"$></mt:CustomFieldAsset>" alt="<$mt:EntryTitle$>"></figure>
+        <mt:Else>
+        <mt:EntryAssets type="image" sort_order="ascend" limit="1">
+           <figure><img src="<$mt:AssetThumbnailURL width="320"$>" alt="<$mt:EntryTitle$>"></figure>
+           <mt:Else>
+           <figure class="noimage"><span>No image</span></figure>
+        </mt:EntryAssets>
+        </mt:If>
+        <div class="entry-detail">
+          <h1><$mt:EntryTitle encode_html="1"$></h1>
+          <p class="entry-excerpt"><$mt:EntryExcerpt$></p>
+        </div>
+      </a>
+    </mt:Entries>
+    </div>
+  </div>
+</section>
+</mt:If>
+
+<$mt:Include module="footer"$>
+
+<$mt:Include module="common_bottom_js"$>
+<script src="<$mt:BlogRelativeURL$>js/jquery.tile.min.js"></script>
+<script>
+$(window).load(function(){
+  $('#top-news .col-sm-3').tile(4);
+});
+$(function() {
+  var $body = $('body');
+  $('.navbar-scroll a').smoothScroll({
+    beforeScroll: function() {
+      $body.addClass('smooth-scroll-scrolling');
+      $(".navbar-collapse.collapse.in").collapse('hide');
+    },
+    afterScroll: function() {
+      $body.removeClass('smooth-scroll-scrolling');
+    },
+  });
+});
+</script>
+</body>
+</html>
