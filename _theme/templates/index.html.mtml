@@ -51,7 +51,7 @@
   </div>
 </section>
 
-<mt:Pages sort_order="ascend" no_folder="1">
+<mt:Pages no_folder="1">
   <mt:SetVarBlock name="iposition"><mt:CustomFieldValue identifier="imageposition" /></mt:SetVarBlock>
   <section class="webpages" id="<mt:PageBasename>"<mt:If name="__even__"> pageeven</mt:If>" <mt:If name="iposition" eq="背景全体に配置"><mt:If tag="CustomFieldValue" identifier="pageimage"> style="position: relative; background: url('<mt:CustomFieldAsset identifier="pageimage"><mt:AssetURL></mt:CustomFieldAsset>')  no-repeat scroll center 30% / cover ;"</mt:If></mt:If>>
     <mt:If name="iposition" eq="上に配置">
