@@ -51,29 +51,29 @@
   </div>
 </section>
 
-<mt:Pages sort_order="ascend">
-<mt:SetVarBlock name="iposition"><mt:CustomFieldValue identifier="imageposition" /></mt:SetVarBlock>
-<section class="webpages" id="<$mt:PageBasename$>"<mt:If name="__even__"> pageeven</mt:If>" <mt:If name="iposition" eq="背景全体に配置"><mt:If tag="CustomFieldValue" identifier="pageimage"> style="position: relative; background: url('<mt:CustomFieldAsset identifier="pageimage"><$mt:AssetURL$></mt:CustomFieldAsset>')  no-repeat scroll center 30% / cover ;"</mt:If></mt:If>>
-          <mt:If name="iposition" eq="上に配置">
-          <mt:If tag="CustomFieldValue" identifier="pageimage">
-          <div class="pageimage top" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><$mt:AssetURL$></mt:CustomFieldAsset>');"></div>
-          </mt:If>
-          </mt:If>
-  <div class="container<mt:If name="iposition" eq="上に配置"> image-top</mt:If>">
-    <h3><$mt:PageTitle encode_html="1"$></h3>
-    <div class="row">
-      <div class="col-sm-12">
-      <$mt:PageBody$>
-      <$mt:PageMore$>
+<mt:Pages sort_order="ascend" tags="@トップページに表示">
+  <mt:SetVarBlock name="iposition"><mt:CustomFieldValue identifier="imageposition" /></mt:SetVarBlock>
+  <section class="webpages" id="<$mt:PageBasename$>"<mt:If name="__even__"> pageeven</mt:If>" <mt:If name="iposition" eq="背景全体に配置"><mt:If tag="CustomFieldValue" identifier="pageimage"> style="position: relative; background: url('<mt:CustomFieldAsset identifier="pageimage"><$mt:AssetURL$></mt:CustomFieldAsset>')  no-repeat scroll center 30% / cover ;"</mt:If></mt:If>>
+    <mt:If name="iposition" eq="上に配置">
+      <mt:If tag="CustomFieldValue" identifier="pageimage">
+        <div class="pageimage top" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><$mt:AssetURL$></mt:CustomFieldAsset>');"></div>
+      </mt:If>
+    </mt:If>
+    <div class="container<mt:If name="iposition" eq="上に配置"> image-top</mt:If>">
+      <h3><$mt:PageTitle encode_html="1"$></h3>
+      <div class="row">
+        <div class="col-sm-12">
+          <$mt:PageBody$>
+          <$mt:PageMore$>
+        </div>
       </div>
     </div>
-  </div>
-          <mt:If name="iposition" eq="下に配置">
-          <mt:If tag="CustomFieldValue" identifier="pageimage">
-          <div class="pageimage bottom" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><$mt:AssetURL$></mt:CustomFieldAsset>');"></div>
-          </mt:If>
-          </mt:If>
-</section>
+    <mt:If name="iposition" eq="下に配置">
+      <mt:If tag="CustomFieldValue" identifier="pageimage">
+        <div class="pageimage bottom" style="background-image: url('<mt:CustomFieldAsset identifier="pageimage"><$mt:AssetURL$></mt:CustomFieldAsset>');"></div>
+      </mt:If>
+    </mt:If>
+  </section>
 </mt:Pages>
 
 <mt:If name="entrycount" gt="0">
