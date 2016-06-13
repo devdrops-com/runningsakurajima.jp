@@ -1,0 +1,76 @@
+<!DOCTYPE html><mt:Include module="config">
+<html lang="<mt:BlogLanguage>" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="<mt:PublishCharset>">
+<title><mt:PageTitle encode_html="1"> | <mt:BlogName encode_html="1"></title>
+<meta name="description" content="<mt:PageExcerpt>">
+<meta name="keywords" content="<mt:GetVar name="metakeywords"><mt:PageKeywords>">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="<mt:BlogURL encode_html="1">images/favicon.ico">
+<link rel="start" href="<mt:BlogURL encode_html="1">">
+<link rel="alternate" type="application/atom+xml" title="Recent Pages" href="<mt:BlogURL encode_html="1">atom.xml">
+<mt:CanonicalLink>
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="<mt:BlogLanguage setvar="blog_lang"><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><mt:Var name="blog_lang"></mt:If>">
+<meta property="og:title" content="<mt:PageTitle encode_html="1"> | <mt:BlogName encode_html="1">">
+<meta property="og:url" content="<mt:PagePermalink encode_html="1">">
+<meta property="og:description" content="<mt:PageExcerpt>">
+<meta property="og:site_name" content="<mt:BlogName encode_html="1">">
+<meta property="og:image" content="<mt:If tag="CustomFieldValue" identifier="main_image_page"><mt:CustomFieldAsset identifier="main_image_page"><mt:AssetThumbnailURL width="1200"></mt:CustomFieldAsset><mt:Else><mt:PageAssets type="image" sort_order="ascend" limit="1"><mt:AssetThumbnailURL width="1200"><mt:Else><mt:BlogURL encode_html="1">images/ogimage.jpg</mt:PageAssets></mt:If>">
+<!-- Microdata -->
+<meta itemprop="description" content="<mt:PageExcerpt>">
+<link itemprop="url" href="<mt:PagePermalink encode_html="1">">
+<link itemprop="image" href="<mt:If tag="CustomFieldValue" identifier="main_image_page"><mt:CustomFieldAsset identifier="main_image_page"><mt:AssetThumbnailURL width="1200"></mt:CustomFieldAsset><mt:Else><mt:PageAssets type="image" sort_order="ascend" limit="1"><mt:AssetThumbnailURL width="1200"><mt:Else><mt:BlogURL encode_html="1">images/ogimage.jpg</mt:PageAssets></mt:If>">
+<mt:Include module="common_stylesheet">
+<mt:Include module="common_head_js">
+</head>
+
+<body id="top">
+
+<mt:SetVarBlock name="thispage">blog</mt:SetVarBlock>
+
+<mt:Include module="header_news">
+
+
+<section id="mainvisual-lower">
+  <div class="overray"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>ニュース</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="content">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="col-sm-9" id="blog-primary-content">
+        <article id="page-detail">
+          <div class="page-meta">
+            <time datetime="<mt:PageDate format="%Y-%m-%d">"><span class="year"><mt:PageDate format="%Y">年</span><span class="monthday"><mt:PageDate format="%b月%e日"></span></time>
+            <mt:PageCategories><a href="<mt:CategoryArchiveLink>" class="category"><mt:CategoryLabel encode_html="1"></a></mt:PageCategories>
+          </div>
+          <h1 class="pagetitle"><mt:PageTitle encode_html="1"></h1>
+          <div id="page-body">
+            <mt:PageBody>
+            <mt:PageMore>
+          </div>
+        </article>
+      </div><!-- /primary-content -->
+      <aside class="col-sm-3 pull-right" id="sidebar">
+<mt:Include module="blog-sidemenu">
+      </aside><!-- sidebar -->
+    </div>
+  </div>
+</div>
+
+<mt:Include module="footer">
+
+<mt:Include module="common_bottom_js">
+
+</body>
+</html>

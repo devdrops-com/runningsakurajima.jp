@@ -128,9 +128,17 @@ elements:
           header_news:
             filename: header_news.mtml
             label: header_news
+        page:
+          page:
+            filename: page.mtml
+            label: ウェブページ
+            mappings:
+              page:
+                archive_type: Page
+                file_template: "%-c/%-f"
+                preferred: 1
         system:
           404_error:
             filename: 404_error.mtml
             label: 404 エラー
     importer: template_set
-
