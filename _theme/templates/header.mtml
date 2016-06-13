@@ -12,13 +12,10 @@
       </ul>
       <ul class="nav navbar-nav navbar-scroll">
         <li><a href="<mt:WebsiteURL>#mainvisual">ホーム</a></li>
-        <mt:Pages sort_order="ascend" no_folder="1">
-        <li><a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:PageTitle encode_html="1"></a></li>
+        <mt:Pages no_folder="1">
+          <li><a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:PageTitle encode_html="1"></a></li>
         </mt:Pages>
-        <mt:If name="entrycount" gt="0">
-        <li><a href="<mt:WebsiteURL><mt:BlogRelativeURL>news.html">ニュース</a></li>
-        </mt:If>
-        <li class="hidden"><a href="#top-news"></a></li>
+        <li><a href="<mt:WebsiteURL>#top-news">ニュース</a></li>
       </ul>
     </nav>
   </div>
