@@ -2,7 +2,10 @@
   "name": "runningsakurajima-jp",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass": "~3.3.5",
+    "jquery.tile.js": "https://github.com/urin/jquery.tile.js.git#^1.1.1",
+    "jquery-smooth-scroll": "^1.7.2",
+    "font-awesome": "fontawesome#^4.6.3"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -10,6 +13,17 @@
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "fonts/*",
+        "scss/font-awesome.scss"
+      ]
+    },
+    "jquery.tile.js": {
+      "main": [
+        "jquery.tile.min.js"
       ]
     }
   },
