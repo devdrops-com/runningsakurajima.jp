@@ -877,90 +877,898 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-// .browserupgrade {
-//   margin: 0.2em 0;
-//   background: #ccc;
-//   color: #000;
-//   padding: 0.2em 0;
-// }
-//
-// /* Space out content a bit */
-// body {
-//   padding-top: 20px;
-//   padding-bottom: 20px;
-// }
-//
-// /* Everything but the jumbotron gets side spacing for mobile first views */
-// .header,
-// .marketing,
-// .footer {
-//   padding-left: 15px;
-//   padding-right: 15px;
-// }
-//
-// /* Custom page header */
-// .header {
-//   border-bottom: 1px solid #e5e5e5;
-//
-//   /* Make the masthead heading the same height as the navigation */
-//   h3 {
-//     margin-top: 0;
-//     margin-bottom: 0;
-//     line-height: 40px;
-//     padding-bottom: 19px;
-//   }
-// }
-//
-// /* Custom page footer */
-// .footer {
-//   padding-top: 19px;
-//   color: #777;
-//   border-top: 1px solid #e5e5e5;
-// }
-//
-// .container-narrow > hr {
-//   margin: 30px 0;
-// }
-//
-// /* Main marketing message and sign up button */
-// .jumbotron {
-//   text-align: center;
-//   border-bottom: 1px solid #e5e5e5;
-//   .btn {
-//     font-size: 21px;
-//     padding: 14px 24px;
-//   }
-// }
-//
-// /* Supporting marketing content */
-// .marketing {
-//   margin: 40px 0;
-//   p + h4 {
-//     margin-top: 28px;
-//   }
-// }
-//
-// /* Responsive: Portrait tablets and up */
-// @media screen and (min-width: 768px) {
-//   .container {
-//     max-width: 730px;
-//   }
-//
-//   /* Remove the padding we set earlier */
-//   .header,
-//   .marketing,
-//   .footer {
-//     padding-left: 0;
-//     padding-right: 0;
-//   }
-//
-//   /* Space out the masthead */
-//   .header {
-//     margin-bottom: 30px;
-//   }
-//
-//   /* Remove the bottom border on the jumbotron for visual effect */
-//   .jumbotron {
-//     border-bottom: 0;
-//   }
-// }
+/* ------------------------------------------
+                  COMMON
+------------------------------------------ */
+
+body {
+  padding-top: 80px;
+  color: #111;
+  font: 15px 'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #5F76A6;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin-bottom: 0;
+  padding: 0.5em 0;
+  width: 100%;
+  border-bottom: solid 1px #dcdcdc;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.88);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.sticky {
+  padding: 0.25em 0;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.navbar h1 {
+  padding-top: 14px;
+  text-align: left;
+  font-size: 22px;
+
+  a {
+    color: rgb(34, 173, 203);
+  }
+
+  img {
+    transition: all 0.2s ease-in-out 0s;
+  }
+}
+
+.sticky h1 img {
+  transform: scale(0.8);
+}
+
+.navbar-header {
+  margin: 0;
+}
+
+.navbar-collapse {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar-nav {
+  > li {
+    padding: 5px 0;
+
+    > a {
+      padding: 10px 12px;
+      background: transparent;
+      color: rgb(34, 173, 203);
+      font-weight: bold;
+    }
+  }
+
+  li > a:focus {
+    padding: 10px 12px;
+    background: transparent;
+    color: rgb(34, 173, 203);
+    font-weight: bold;
+  }
+}
+
+.smooth-scroll-scrolling .navbar-nav li.active > a {
+  padding: 10px 12px;
+  background: transparent;
+  color: rgb(34, 173, 203);
+  font-weight: bold;
+}
+
+.navbar-nav li {
+   > a:hover,
+  &.active > a,
+  &.force-active > a {
+    background: #f1f1f1;
+    color: rgb(34, 173, 203);
+  }
+}
+
+.smooth-scroll-scrolling .navbar-nav li {
+   &.active > a:focus,
+  &.force-active.active > a,
+  > a:focus {
+    background: #f1f1f1;
+    color: rgb(34, 173, 203);
+  }
+}
+
+ul.header-socialbtn {
+  float: right;
+  margin-bottom: 0;
+  padding-left: 1em;
+
+  li {
+    display: inline-block;
+    padding: 10px 0;
+    list-style: none;
+    line-height: 20px;
+
+    a {
+      display: inline-block;
+      padding: 5px 0;
+      min-width: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    &.googleplus a {
+      background: #DB4A39;
+    }
+
+    &.twitter a {
+      background: #00B6F1;
+    }
+
+    &.facebook a {
+      background: #3B599C;
+    }
+  }
+}
+
+footer {
+  padding: 15px 0;
+  background: #fafafa;
+  color: #767777;
+  font-size: 86%;
+}
+
+#footer-navi li {
+  display: inline-block;
+  list-style: none;
+
+  a {
+    display: inline-block;
+    padding: 0 0 0 10px;
+    color: #fff;
+  }
+}
+
+/* ------------------------------------------
+             CONTENT COMMON STYLES
+------------------------------------------ */
+
+#content {
+  padding: 2em 0;
+
+  article {
+    h1 {
+      margin: 0 0 15px;
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    .row,
+    p {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+/* ------------------------------------------
+                 LOWER CONTENT
+------------------------------------------ */
+
+#mainvisual-lower {
+  position: relative;
+  padding: 3.5em 0;
+  background: url("http://runningsakurajima-jp.movabletype.io/images/bg-top-main.jpg") no-repeat center bottom;
+  background-size: cover;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #000;
+
+  .overray {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(34, 173, 203);
+    opacity: 0.8;
+  }
+
+  .row {
+    display: table;
+    width: 100%;
+
+    .col-sm-12 {
+      display: table-cell;
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 40px;
+
+    i {
+      padding-right: 10px;
+      font-size: 50px;
+    }
+
+    a {
+      color: #ffffff;
+
+      &:focus,
+      &:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#localnavi {
+  border-bottom: solid 1px #e9e9e9;
+  background: #f6f6f6;
+
+  nav {
+    border-left: solid 1px #e9e9e9;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    li {
+      display: inline-block;
+      float: left;
+      list-style: none;
+
+      a {
+        position: relative;
+        display: inline-block;
+        padding: 10.5px 1.5em;
+        border-right: solid 1px #e9e9e9;
+      }
+
+      &.home a {
+        padding: 10.5px 1em;
+      }
+
+      a:hover {
+        background: #fff;
+        text-decoration: none;
+      }
+
+      span {
+        display: inline-block;
+        padding: 10px 1em;
+        border-right: solid 1px #e9e9e9;
+        background: #fff;
+      }
+
+      &.pagetop span {
+        position: relative;
+      }
+
+      a {
+        &:before {
+          position: absolute;
+          top: 0;
+          right: -10px;
+          z-index: 1;
+          display: block;
+          width: 0;
+          border: 11px solid transparent;
+          border-top-width: 23px;
+          border-right-width: 0;
+          border-bottom-width: 23px;
+          border-left-color: #f6f6f6;
+          content: "";
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          right: -11px;
+          display: block;
+          width: 0;
+          border: 11px solid transparent;
+          border-top-width: 23px;
+          border-right-width: 0;
+          border-bottom-width: 23px;
+          border-left-color: #e9e9e9;
+          content: "";
+        }
+
+        &:hover:before {
+          border-left-color: #fff;
+        }
+      }
+
+      &.pagetop ul li {
+        display: block;
+        float: none;
+
+        a {
+          display: block;
+          border-right: none;
+
+          &:hover {
+            background: #f6f6f6;
+          }
+        }
+
+        &.active a:hover {
+          background: #428bca;
+        }
+
+        a {
+          &:after,
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: #none;
+  list-style: none outside none;
+}
+
+#blog-primary-content {
+  padding-left: 0;
+}
+
+#entry-list {
+  article {
+    margin-bottom: 3em;
+    padding-bottom: 3em;
+    border-bottom: solid 1px #e9e9e9;
+  }
+
+  figure {
+    float: right;
+    margin-bottom: 1em;
+    margin-left: 2em;
+
+    img {
+      width: 100%;
+      border: solid 1px #e9e9e9;
+    }
+  }
+}
+
+.entry-meta {
+  margin-bottom: 1em;
+  font-size: 86%;
+
+  time {
+    display: inline-block;
+    margin-right: 0.5em;
+    padding: 0.2em 0.3em 0.2em 0.5em;
+    background: #f1f1f1;
+
+    span {
+      display: inline-block;
+
+      &.year {
+        padding-right: 0.3em;
+      }
+
+      &.monthday {
+        padding: 0.2em 0.5em;
+        background: #ffffff;
+      }
+    }
+  }
+
+  .category {
+    margin-right: 8px;
+    padding: 0.5em 0.8em;
+    background: #666666;
+    color: #ffffff;
+  }
+}
+
+.entry-excerpt {
+  margin-bottom: 1em;
+}
+
+.pagemore {
+  text-align: left;
+}
+
+#content #entry-list h1 {
+  margin-bottom: 15px;
+  color: #111;
+  font-size: 20px;
+}
+
+#sidebar {
+  nav {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: solid 3px #e9e9e9;
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    color: rgb(34, 173, 203);
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  ul {
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.7em;
+      padding-bottom: 0.7em;
+      border-bottom: solid 1px #e9e9e9;
+      list-style: none;
+
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+h1.page-title {
+  margin: 0 0 1em;
+}
+
+/* ------------------------------------------
+                 ENTRY DETAIL
+------------------------------------------ */
+
+#entry-detail {
+  figure {
+    margin-bottom: 2em;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ------------------------------------------
+                    BTN
+------------------------------------------ */
+
+.btn-primary {
+  padding: 8px 15px;
+  border-color: rgb(34, 173, 203);
+  background: rgb(34, 173, 203);
+
+  &:hover {
+    border-color: #888888;
+    background: #888888;
+  }
+}
+
+.btn-secondary {
+  border-color: #e1e1e1;
+  background: #f1f1f1;
+
+  &:hover {
+    border-color: #e9e9e9;
+    background: #f9f9f9;
+  }
+}
+
+.btn-info,
+.btn-success {
+  border-color: #60A79D;
+  background: #60A79D;
+
+  &:hover {
+    border-color: #74BBB1;
+    background: #74BBB1;
+  }
+}
+
+/* ------------------------------------------
+                    TOP
+------------------------------------------ */
+
+body#sitetop {
+  padding-top: 0;
+}
+
+#sitetop {
+  .navbar {
+    background-color: rgba(34, 173, 203, 0.7);
+
+    h1 a {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .navbar-nav {
+    > li > a,
+    li > a:focus {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .smooth-scroll-scrolling .navbar-nav li.active > a {
+    color: rgb(255, 255, 255);
+  }
+
+  .navbar-nav li {
+     > a:hover,
+    &.active > a,
+    &.force-active > a {
+      background-color: rgb(34, 173, 203);
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .smooth-scroll-scrolling .navbar-nav li {
+     &.active > a:focus,
+    &.force-active.active > a,
+    > a:focus {
+      background-color: rgb(34, 173, 203);
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+#mainvisual {
+  padding: 7em 0 3em;
+  min-height: 400px;
+  width: 100%;
+  border-bottom: solid 1px #e9e9e9;
+  background-image: url("http://runningsakurajima-jp.movabletype.io/images/bg-top-main.jpg");
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  h2 {
+    margin: 0 0 20px;
+    color: #ffffff;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-group .btn {
+    width: 300px;
+  }
+}
+
+#main-text {
+  color: #ffffff;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+
+  a {
+    color: #ffffff;
+  }
+}
+
+.webpages {
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #ffffff;
+
+  .container {
+    padding: 50px 15px;
+  }
+
+  .image-top {
+    padding: 10px 15px 50px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    color: rgb(34, 173, 203);
+    font-size: 34px;
+  }
+
+  h4 {
+    padding-top: 10px;
+    color: #767777;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  h5 {
+    padding-top: 10px;
+    color: #767777;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  img {
+    height: auto;
+  }
+}
+
+.pageimage {
+  height: 400px;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#top-news {
+  padding: 3em 0;
+  background-color: #ffffff;
+  color: #767777;
+
+  h3 {
+    margin: 0 0 25px;
+    color: rgb(34, 173, 203);
+    text-align: center;
+    font-size: 40px;
+  }
+
+  a {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+
+    &.col-sm-3 {
+      display: block;
+      margin: 0 15px 15px;
+      padding: 0;
+      width: 262.5px;
+      background: #ffffff;
+      color: #111;
+    }
+
+    &:hover {
+      color: #5f76a6;
+      text-decoration: none;
+    }
+  }
+
+  figure {
+    display: block;
+    overflow: hidden;
+    height: 150px;
+
+    &.noimage {
+      height: 150px;
+      background: #999;
+      color: #ffffff;
+      text-align: center;
+      font-size: 30px;
+      line-height: 150px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .entry-detail {
+    padding: 1em;
+  }
+
+  h1 {
+    margin: 0 0 0.5em;
+    font-size: 114%;
+  }
+
+  p {
+    margin: 0;
+
+    &.entry-excerpt {
+      font-size: 86%;
+    }
+  }
+
+  .top-newslist {
+    margin-top: 2em;
+    text-align: center;
+  }
+}
+
+/* ------------------------------------------
+               STYLE FOR TABLET
+------------------------------------------ */
+@media screen and (max-width: 767px) {
+  img {
+    max-width: 100%;
+  }
+
+  header {
+    margin-bottom: 5px;
+  }
+
+  .container > .navbar-header {
+    position: relative;
+    margin: 0 0 5px;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    margin: 0;
+    border: solid 1px #dcdcdc;
+
+    > li {
+      padding: 0;
+    }
+  }
+
+  button.navbar-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0;
+    padding: 8px 11px;
+    border: solid 1px #f1f1f1;
+    border-radius: 3px;
+    background: #f6f6f6;
+    font-size: 15px;
+  }
+
+  .container > .navbar-collapse {
+    margin: 0;
+  }
+
+  ul.header-socialbtn {
+    float: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .col-sm-1,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9 {
+    margin-bottom: 3em;
+  }
+
+  section {
+    .col-sm-10:last-of-type,
+    .col-sm-11:last-of-type,
+    .col-sm-12:last-of-type,
+    .col-sm-1:last-of-type,
+    .col-sm-2:last-of-type,
+    .col-sm-3:last-of-type,
+    .col-sm-4:last-of-type,
+    .col-sm-5:last-of-type,
+    .col-sm-6:last-of-type,
+    .col-sm-7:last-of-type,
+    .col-sm-8:last-of-type,
+    .col-sm-9:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  #footer-logoarea {
+    text-align: center;
+  }
+
+  #footer-navi ul.pull-right {
+    float: none !important;
+    padding: 0;
+    text-align: center;
+  }
+
+  footer .col-sm-6 {
+    margin-bottom: 0;
+  }
+
+  #mainvisual .btn-group {
+    display: block;
+    text-align: center;
+
+    .btn {
+      display: inline-block;
+      float: none;
+      margin-bottom: 0.5em;
+      width: 45%;
+      border-radius: 3px;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  #top-news a.col-sm-3 {
+    margin: 0 auto 2em;
+    width: 90%;
+  }
+
+  #sidebar {
+    width: 100%;
+
+    h1 {
+      padding: 1em 0.7em;
+      background: #f6f6f6;
+    }
+  }
+
+  #entry-list figure {
+    width: 40%;
+  }
+}
+
+/* ------------------------------------------
+                  for sp
+------------------------------------------ */
+@media (max-width: 768px) {
+  #entry-list figure {
+    display: none;
+  }
+
+  #mainvisual {
+    background-attachment: scroll;
+  }
+
+  .pageimage {
+    height: 250px;
+    background-attachment: scroll;
+  }
+
+  .navbar h1 {
+    padding-top: 18px;
+    font-size: 18px;
+  }
+}
+
+/* ------------------------------------------
+                  Pagination
+------------------------------------------ */
+
+.page-navigation {
+  text-align: center;
+
+  ul {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  li {
+    display: inline-block;
+    border-bottom: none;
+
+    a {
+      padding: 0 10px;
+
+      &[rel="prev"]::before {
+        margin-right: 0.3em;
+        content: "Â«";
+      }
+
+      &[rel="next"]::after {
+        margin-left: 0.3em;
+        content: "Â»";
+      }
+    }
+  }
+}
