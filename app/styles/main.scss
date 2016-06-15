@@ -886,8 +886,12 @@ $icon-font-path: '../fonts/';
 
 .footer-address {
   strong {
-    font-size: $font-size-h2;
+    font-size: $font-size-h3;
   }
+}
+
+.footer-pamphlet {
+  text-align: right;
 }
 
 .footer-ad {
