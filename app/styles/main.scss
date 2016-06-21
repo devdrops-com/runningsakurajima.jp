@@ -26,7 +26,7 @@ $turquoise: #009b9f;
 $turquoise-blue: #00afcc;
 $turquoise-green: #00947a;
 
-$brand-primary: darken(#428bca, 6.5%); // #337ab7
+$brand-primary: $turquoise-blue;
 $brand-success: #5cb85c;
 $brand-info: #5bc0de;
 $brand-warning: #f0ad4e;
@@ -897,6 +897,23 @@ body {
   padding-top: 80px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+
+  &.mt-image-center,
+  &.mt-image-left,
+  &.mt-image-none,
+  &.mt-image-right {
+    @media(max-width: $screen-xs-max) {
+      display: block !important;
+      float: inherit !important;
+      margin: auto auto 20px !important;
+      text-align: center !important;
+    }
+  }
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -972,18 +989,18 @@ body {
 }
 
 .navbar-nav li {
-   > a:hover,
-  &.active > a,
-  &.force-active > a {
+   &.active > a,
+  &.force-active > a,
+  > a:hover {
     background: #f1f1f1;
     color: $turquoise-blue;
   }
 }
 
 .smooth-scroll-scrolling .navbar-nav li {
-   &.active > a:focus,
-  &.force-active.active > a,
-  > a:focus {
+   > a:focus,
+  &.active > a:focus,
+  &.force-active.active > a {
     background: #f1f1f1;
     color: $turquoise-blue;
   }
@@ -1508,18 +1525,18 @@ body#sitetop {
   }
 
   .navbar-nav li {
-     > a:hover,
-    &.active > a,
-    &.force-active > a {
+     &.active > a,
+    &.force-active > a,
+    > a:hover {
       background-color: $turquoise-blue;
       color: $white;
     }
   }
 
   .smooth-scroll-scrolling .navbar-nav li {
-     &.active > a:focus,
-    &.force-active.active > a,
-    > a:focus {
+     > a:focus,
+    &.active > a:focus,
+    &.force-active.active > a {
       background-color: $turquoise-blue;
       color: $white;
     }
@@ -1575,6 +1592,10 @@ body#sitetop {
     color: $turquoise-blue;
     text-align: center;
     font-size: 34px;
+
+    small {
+      display: block;
+    }
   }
 
   h4 {
@@ -1595,6 +1616,28 @@ body#sitetop {
     height: auto;
   }
 }
+@media(min-width:$screen-md-min) {
+  #point,
+  #yoko,
+  #entry {
+    .container {
+      width: 800px;
+    }
+  }
+}
+
+table {
+  thead th {
+    background-color: $brand-primary;
+    color: $white;
+  }
+  tbody th {
+    background-color: $medium-turquoise;
+    color: $white;
+  }
+}
+
+#yoko {}
 
 .pageimage {
   height: 400px;
@@ -1612,6 +1655,10 @@ body#sitetop {
     color: $turquoise-blue;
     text-align: center;
     font-size: 34px;
+
+    small {
+      display: block;
+    }
   }
 
   a {
@@ -1623,11 +1670,11 @@ body#sitetop {
       padding: 0;
       width: 262.5px;
       background: $white;
-      color: #111;
+      color: $text-color;
     }
 
     &:hover {
-      color: #5f76a6;
+      color: $turquoise;
       text-decoration: none;
     }
   }
