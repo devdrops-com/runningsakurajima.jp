@@ -7,25 +7,30 @@
 // //== Colors
 // //
 // //## Gray and brand colors for use across Bootstrap.
-//
-// $gray-base:              #000 !default;
-// $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-// $gray-dark:              lighten($gray-base, 20%) !default;   // #333
-// $gray:                   lighten($gray-base, 33.5%) !default; // #555
-// $gray-light:             lighten($gray-base, 46.7%) !default; // #777
-// $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-//
+
+$gray-base: #000;
+$gray-darker: lighten($gray-base, 13.5%); // #222
+$gray-dark: lighten($gray-base, 20%); // #333
+$gray: lighten($gray-base, 33.5%); // #555
+$gray-light: lighten($gray-base, 46.7%); // #777
+$gray-lighter: lighten($gray-base, 93.5%); // #eee
 
 $white: #fff;
 $black: #000;
 $aka: #e60033;
-$turquoise-blue: #00afcc;
+$navi-blue: #202f55;
 
-// $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
-// $brand-success:         #5cb85c !default;
-// $brand-info:            #5bc0de !default;
-// $brand-warning:         #f0ad4e !default;
-// $brand-danger:          #d9534f !default;
+$pale-turquoise: #afeeee;
+$medium-turquoise: #48d1cc;
+$turquoise: #009b9f;
+$turquoise-blue: #00afcc;
+$turquoise-green: #00947a;
+
+$brand-primary: darken(#428bca, 6.5%); // #337ab7
+$brand-success: #5cb85c;
+$brand-info: #5bc0de;
+$brand-warning: #f0ad4e;
+$brand-danger: $aka;
 //
 //
 // //== Scaffolding
@@ -33,29 +38,29 @@ $turquoise-blue: #00afcc;
 // //## Settings for some of the most global styles.
 //
 // //** Background color for `<body>`.
-// $body-bg:               #fff !default;
+$body-bg: $white;
 // //** Global text color on `<body>`.
-// $text-color:            $gray-dark !default;
+$text-color: $gray-dark;
 //
 // //** Global textual link color.
-// $link-color:            $brand-primary !default;
+$link-color: $brand-primary;
 // //** Link hover color set via `darken()` function.
-// $link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color: darken($link-color, 15%);
 // //** Link hover decoration.
-// $link-hover-decoration: underline !default;
+$link-hover-decoration: underline;
 //
 //
 // //== Typography
 // //
 // //## Font, line-height, and color for body text, headings, and more.
 //
-// $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif: 'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 // //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 // $font-family-base:        $font-family-sans-serif !default;
 //
-// $font-size-base:          14px !default;
+$font-size-base: 15px;
 // $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 //
@@ -67,7 +72,7 @@ $turquoise-blue: #00afcc;
 // $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 //
 // //** Unit-less `line-height` for use in components like buttons.
-// $line-height-base:        1.428571429 !default; // 20/14
+$line-height-base: 1.6;
 // //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 // $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 //
@@ -884,62 +889,12 @@ $icon-font-path: '../fonts/';
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
-#entry,
-#faq,
-#flow,
-#yoko {
-  .container {
-    width: 970px;
-  }
-}
-
-.footer-address {
-  strong {
-    font-size: $font-size-h3;
-  }
-}
-
-.footer-pamphlet {
-  text-align: right;
-}
-
-.footer-ad {
-  .row {
-    @media (max-width: $screen-xs-max) {
-      margin-right: -5px;
-      margin-left: -5px;
-    }
-
-    [class^="col-"] {
-      text-align: center;
-      margin-bottom: 20px;
-      @media (max-width: $screen-xs-max) {
-        padding-right: 5px;
-        padding-left: 5px;
-      }
-    }
-  }
-}
-
-#footer-logoarea {
-  text-align: center;
-}
-
-/* nawagate end */
-
 /* ------------------------------------------
                   COMMON
 ------------------------------------------ */
 
 body {
   padding-top: 80px;
-  color: #111;
-  font: 15px 'Lucida Grande','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-  line-height: 1.6;
-}
-
-a {
-  color: #5F76A6;
 }
 
 .navbar {
@@ -968,7 +923,7 @@ a {
   font-size: 22px;
 
   a {
-    color: rgb(34, 173, 203);
+    color: $turquoise-blue;
   }
 
   img {
@@ -996,7 +951,7 @@ a {
     > a {
       padding: 10px 12px;
       background: transparent;
-      color: rgb(34, 173, 203);
+      color: $turquoise-blue;
       font-weight: bold;
     }
   }
@@ -1004,7 +959,7 @@ a {
   li > a:focus {
     padding: 10px 12px;
     background: transparent;
-    color: rgb(34, 173, 203);
+    color: $turquoise-blue;
     font-weight: bold;
   }
 }
@@ -1012,7 +967,7 @@ a {
 .smooth-scroll-scrolling .navbar-nav li.active > a {
   padding: 10px 12px;
   background: transparent;
-  color: rgb(34, 173, 203);
+  color: $turquoise-blue;
   font-weight: bold;
 }
 
@@ -1021,7 +976,7 @@ a {
   &.active > a,
   &.force-active > a {
     background: #f1f1f1;
-    color: rgb(34, 173, 203);
+    color: $turquoise-blue;
   }
 }
 
@@ -1030,7 +985,7 @@ a {
   &.force-active.active > a,
   > a:focus {
     background: #f1f1f1;
-    color: rgb(34, 173, 203);
+    color: $turquoise-blue;
   }
 }
 
@@ -1049,7 +1004,7 @@ ul.header-socialbtn {
       display: inline-block;
       padding: 5px 0;
       min-width: 30px;
-      color: #ffffff;
+      color: $white;
       text-align: center;
     }
 
@@ -1068,10 +1023,94 @@ ul.header-socialbtn {
 }
 
 footer {
-  padding: 15px 0;
-  background: #fafafa;
-  color: #767777;
-  font-size: 86%;
+  font-size: 13px;
+
+  #footer-info {
+    padding: 40px 0;
+    background: $turquoise;
+    color: $white;
+  }
+
+  #footer-menu {
+    .footer-menu-title {
+      font-size: 15px;
+    }
+
+    ul {
+      list-style-type: none;
+      line-height: 2;
+      margin-bottom: 0;
+
+      > li {
+        position: relative;
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: -1.5em;
+          display: block;
+          width: 1em;
+          color: $white;
+          content: '\f105';
+          text-align: center;
+          font-family: FontAwesome;
+        }
+
+        > a {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  #footer-address {
+    margin-top: 20px;
+
+    address {
+      margin-bottom: 0;
+
+      strong {
+        font-size: 20px;
+      }
+    }
+  }
+
+  #footer-pamphlet {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #footer-ad {
+    margin-top: 20px;
+
+    .row {
+      @media (max-width: $screen-xs-max) {
+        margin-right: -5px;
+        margin-left: -5px;
+      }
+
+      [class^="col-"] {
+        margin-bottom: 20px;
+        text-align: center;
+        @media (max-width: $screen-xs-max) {
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
+  #footer-logoarea {
+    text-align: center;
+
+    p {
+      margin: 0;
+
+      small {
+        font-size: 100%;
+      }
+    }
+  }
 }
 
 #footer-navi li {
@@ -1120,10 +1159,10 @@ footer {
 #mainvisual-lower {
   position: relative;
   padding: 3.5em 0;
-  background: url("./images/toppage-background-image-00-running.jpg") no-repeat center bottom;
+  background: url("http://runningsakurajima-jp.movabletype.io/.assets/1280x800.png") no-repeat center bottom;
   background-size: cover;
-  color: #ffffff;
-  text-shadow: 0 1px 0 #000;
+  color: $white;
+  text-shadow: 0 1px 0 $black;
 
   .overray {
     position: absolute;
@@ -1131,7 +1170,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(34, 173, 203);
+    background: $turquoise-blue;
     opacity: 0.8;
   }
 
@@ -1156,11 +1195,11 @@ footer {
     }
 
     a {
-      color: #ffffff;
+      color: $white;
 
       &:focus,
       &:hover {
-        color: #ffffff;
+        color: $white;
         text-decoration: underline;
       }
     }
@@ -1325,7 +1364,7 @@ footer {
 
       &.monthday {
         padding: 0.2em 0.5em;
-        background: #ffffff;
+        background: $white;
       }
     }
   }
@@ -1334,7 +1373,7 @@ footer {
     margin-right: 8px;
     padding: 0.5em 0.8em;
     background: #666666;
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -1361,7 +1400,7 @@ footer {
 
   h1 {
     margin: 0 0 20px;
-    color: rgb(34, 173, 203);
+    color: $turquoise-blue;
     font-weight: bold;
     font-size: 15px;
   }
@@ -1410,8 +1449,8 @@ h1.page-title {
 
 .btn-primary {
   padding: 8px 15px;
-  border-color: rgb(34, 173, 203);
-  background: rgb(34, 173, 203);
+  border-color: $turquoise-blue;
+  background: $turquoise-blue;
 
   &:hover {
     border-color: #888888;
@@ -1450,30 +1489,30 @@ body#sitetop {
 
 #sitetop {
   .navbar {
-    background-color: rgba(34, 173, 203, 0.7);
+    background-color: rgba($turquoise-blue, 0.7);
 
     h1 a {
-      color: rgb(255, 255, 255);
+      color: $white;
     }
   }
 
   .navbar-nav {
     > li > a,
     li > a:focus {
-      color: rgb(255, 255, 255);
+      color: $white;
     }
   }
 
   .smooth-scroll-scrolling .navbar-nav li.active > a {
-    color: rgb(255, 255, 255);
+    color: $white;
   }
 
   .navbar-nav li {
      > a:hover,
     &.active > a,
     &.force-active > a {
-      background-color: rgb(34, 173, 203);
-      color: rgb(255, 255, 255);
+      background-color: $turquoise-blue;
+      color: $white;
     }
   }
 
@@ -1481,18 +1520,18 @@ body#sitetop {
      &.active > a:focus,
     &.force-active.active > a,
     > a:focus {
-      background-color: rgb(34, 173, 203);
-      color: rgb(255, 255, 255);
+      background-color: $turquoise-blue;
+      color: $white;
     }
   }
 }
 
 #mainvisual {
   padding: 7em 0 3em;
-  min-height: 800px;
+  min-height: 400px;
   width: 100%;
   border-bottom: solid 1px #e9e9e9;
-  background-image: url("../images/toppage-background-image-00-running.jpg");
+  background-image: url("http://runningsakurajima-jp.movabletype.io/.assets/1280x800.png");
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
@@ -1501,7 +1540,7 @@ body#sitetop {
 
   h2 {
     margin: 0 0 20px;
-    color: #ffffff;
+    color: $white;
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   }
 
@@ -1511,17 +1550,17 @@ body#sitetop {
 }
 
 #main-text {
-  color: #ffffff;
+  color: $white;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 
   a {
-    color: #ffffff;
+    color: $white;
   }
 }
 
 .webpages {
-  border-bottom: 1px solid #dcdcdc;
-  background-color: #ffffff;
+  border-bottom: 1px solid $gray-lighter;
+  background-color: $white;
 
   .container {
     padding: 50px 15px;
@@ -1533,25 +1572,21 @@ body#sitetop {
 
   h3 {
     margin-bottom: 20px;
-    color: rgb(34, 173, 203);
-    font-size: 34px;
+    color: $turquoise-blue;
     text-align: center;
-
-    small {
-      display: block;
-    }
+    font-size: 34px;
   }
 
   h4 {
     padding-top: 10px;
-    color: #767777;
+    color: $turquoise-blue;
     font-weight: bold;
     font-size: 22px;
   }
 
   h5 {
     padding-top: 10px;
-    color: #767777;
+    color: $turquoise-blue;
     font-weight: bold;
     font-size: 18px;
   }
@@ -1571,14 +1606,12 @@ body#sitetop {
 
 #top-news {
   padding: 3em 0;
-  background-color: #ffffff;
-  color: #767777;
 
   h3 {
     margin: 0 0 25px;
-    color: rgb(34, 173, 203);
+    color: $turquoise-blue;
     text-align: center;
-    font-size: 40px;
+    font-size: 34px;
   }
 
   a {
@@ -1589,7 +1622,7 @@ body#sitetop {
       margin: 0 15px 15px;
       padding: 0;
       width: 262.5px;
-      background: #ffffff;
+      background: $white;
       color: #111;
     }
 
@@ -1607,7 +1640,7 @@ body#sitetop {
     &.noimage {
       height: 150px;
       background: #999;
-      color: #ffffff;
+      color: $white;
       text-align: center;
       font-size: 30px;
       line-height: 150px;
@@ -1813,12 +1846,12 @@ body#sitetop {
 
       &[rel="prev"]::before {
         margin-right: 0.3em;
-        content: "Â«";
+        content: "«";
       }
 
       &[rel="next"]::after {
         margin-left: 0.3em;
-        content: "Â»";
+        content: "»";
       }
     }
   }
