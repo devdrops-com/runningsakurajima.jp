@@ -34,22 +34,10 @@
   </head>
   <body id="sitetop">
     <!--[if lt IE 10]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
-    <script>
-      (function () {
-        var id = location.hash.replace('#', '');
-        if (id) {
-          var div = document.createElement('div'),
-            a = document.createElement('a');
-          a.setAttribute('name', id);
-          div.appendChild(a);
-          document.write(div.innerHTML);
-        }
-      })();
-    </script>
     <header class="navbar">
       <div class="container">
         <h1 class="navbar-header navbar-scroll">
-          <a href="#sitetop" class="brand">第37回 ランニング桜島大会</a>
+          <a href="#sitetop" class="brand"><img src="./images/header-logo.png" alt="第37回 ランニング桜島大会"></a>
           <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button">
             <i class="fa fa-list"></i>
           </button>
@@ -71,13 +59,13 @@
             </a>
           </li>
         </ul>
-        <nav class="navbar-collapse collapse navbar-right">
+        <nav id="navbar-example" class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav navbar-scroll">
             <li>
               <a href="./#mainvisual">ホーム</a>
             </li>
             <li>
-              <a href="./#5point">５つのポイント</a>
+              <a href="./#point">５つのポイント</a>
             </li>
             <li>
               <a href="./#yoko">大会開催要項</a>
@@ -109,24 +97,25 @@
     </header>
     <section id="mainvisual" id="top">
       <div class="container">
-        <h2><img src="http://placehold.jp/320x320.png" alt="ロゴ画像"></h2>
-        <p id="main-text">更新！developでコミット。MovableType.netデザインテーマ「One Page」のデモサイトです！<br/>「One Page」は1ページ完結＋ニュース更新が可能なレスポンシブウェブデザインを採用したテーマです。
-          <br/>各ページのメイン画像もカスタムフィールドで簡単に設定することができます。</p>
-        <h1>見出し1</h1>
-        <h2>見出し2</h2>
-        <h3>見出し3</h3>
-        <h4>見出し4</h4>
-        <h5>見出し5</h5>
-        <h6>見出し6</h6>
+        <h2><img src="./images/mainvisual-symbol.png" alt="ロゴ画像"></h2>
+        <div class="countdown">
+          <p>第37回 ランニング桜島開催まであと</p>
+          <span id="clock"></span>
+        </div>
+        <p><img src="./images/mainvisual-place-event.png" alt=""></p>
       </div>
     </section>
     <section class="webpages" id="point">
       <div class="container">
-        <h3>５つのポイント<small>points</small>
+        <h3>５つのポイント<small>POINTS</small>
         </h3>
-        <h4>
+        <h4>見出し4</h4>
+        <h5>見出し5</h5>
+        <h6>見出し6</h6>
+        <div>
           <span class="label label-danger">POINT1</span>
-          桜島と錦江湾が織りなす大自然の絶景</h4>
+        </div>
+        <h4>桜島と錦江湾が織りなす大自然の絶景</h4>
         <p>ハーフマラソンの前半は、平坦な海岸沿いの道路。防波堤が低く、目の前にはイルカが生息している錦江湾が広がります。運がよければ、走りながらイルカが見られるかもしれません。</p>
         <p>後半は、大正時代に流出した溶岩大地の中を通る舗装道路。多少アップダウンが続きますが、めったに見られない溶岩原を眺めながら走ればあっという間にゴールです。</p>
         <p>日本ジオパークに認定されている桜島・錦江湾の魅力を体感できます。</p>
@@ -185,7 +174,6 @@
         </div>
       </div>
     </div>
-    <div class="pageimage bottom" style="background-image: url('http://runningsakurajima-jp.movabletype.io/.assets/1280x800.png');"></div>
   </section>
   <section class="webpages" id="yoko">
     <div class="container">
@@ -204,7 +192,7 @@
       <p>桜島溶岩ランニングコース（一般道路含む）</p>
       <h4>種目・部門</h4>
       <p>※年齢は大会当日の満年齢（中学生は除く）</p>
-      <table class="table table-bordered">
+      <table class="table table-striped table-bordered table-responsive">
         <colgroup>
           <col width="30%">
           <col width="20%">
@@ -541,7 +529,7 @@
       </div>
       <h4>専用振替払込用紙でのお申し込み</h4>
       <p>専用振替払込用紙（コピー不可）に必要事項をご記入の上、参加料を添えて、ゆうちょ銀行または郵便局窓口でお申し込みください。<br>
-      確認用にコピーを大会まで保存されることをおすすめします。</p>
+        確認用にコピーを大会まで保存されることをおすすめします。</p>
       <p>※払込手数料は１３０円となります。</p>
     </div>
   </section>
@@ -1178,26 +1166,12 @@
     </div>
   </footer>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-  <script>
-    (function (b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l;
-      b[l] || (b[l] = function () {
-        (b[l].q = b[l].q || []).push(arguments)
-      });
-      b[l].l =+ new Date;
-      e = o.createElement(i);
-      r = o.getElementsByTagName(i)[0];
-      e.src = 'https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-  </script>
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/jquery.tile.js/jquery.tile.min.js"></script>
   <script src="/bower_components/jquery-smooth-scroll/jquery.smooth-scroll.js"></script>
+  <script src="/bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:js scripts/plugins.js -->
