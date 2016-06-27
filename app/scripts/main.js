@@ -92,17 +92,14 @@
 // トップページ
 (function() {
   'use strict';
-  $('#clock').countdown('2016/12/09 00:10:00').on('update.countdown', function(event) {
-    var format = '%H:%M:%S';
-    if (event.offset.days > 0) {
-      format = '%-d day%!d ' + format;
-    }
-    if (event.offset.weeks > 0) {
-      format = '%-w week%!w ' + format;
-    }
-    $(this).html(event.strftime(format));
+  // カウントダウン
+  $('#countdown .countdown-clock').countdown('2016/12/04 00:10:00').on('update.countdown', function(event) {
+    $(this).html(event.strftime('<div class="countdown-clock-display"><div class="countdown-clock-number">%-D</div><div class="countdown-clock-label">Days</div></div>' +
+      '<div class="countdown-clock-display"><div class="countdown-clock-number">%H</div><div class="countdown-clock-label">Hours</div></div>' +
+      '<div class="countdown-clock-display"><div class="countdown-clock-number">%M</div><div class="countdown-clock-label">Minutes</div></div>' +
+      '<div class="countdown-clock-display"><div class="countdown-clock-number">%S</div><div class="countdown-clock-label">Seconds</div></div>'));
   }).on('finish.countdown', function(event) {
-    $(this).html('This offer has expired!').parent().addClass('disabled');
+    $(this).addClass('disabled');
   });
   //ニュースのサムネイルの高さを揃える
   $('#top-news .col-sm-3').tile(4);

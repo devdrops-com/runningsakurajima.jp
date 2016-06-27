@@ -33,7 +33,6 @@ $palet-3: $paris-daisy;
 $palet-4: $turquoise;
 $palet-5: $pale-turquoise;
 
-
 $brand-primary: $turquoise-blue;
 $brand-success: #5cb85c;
 $brand-info: #5bc0de;
@@ -901,6 +900,12 @@ $table-border-color: $palet-1;
 /* ------------------------------------------
                   COMMON
 ------------------------------------------ */
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "28-Segment LED DisplayRegular";
+  src: url("#{$icon-font-path}28-Segment_LED_DisplayRegular.eot?") format("eot"), url("#{$icon-font-path}28-Segment_LED_DisplayRegular.woff") format("woff"), url("#{$icon-font-path}28-Segment_LED_DisplayRegular.ttf") format("truetype"), url("#{$icon-font-path}28-Segment_LED_DisplayRegular.svg#28-SegmentLEDDisplay") format("svg");
+}
 
 body {
   padding-top: 80px;
@@ -910,12 +915,12 @@ img {
   max-width: 100%;
   height: auto;
 
-  &.pull-left,
-  &.pull-right,
   &.mt-image-center,
   &.mt-image-left,
   &.mt-image-none,
-  &.mt-image-right {
+  &.mt-image-right,
+  &.pull-left,
+  &.pull-right {
     @media(max-width: $screen-xs-max) {
       display: block !important;
       float: inherit !important;
@@ -992,9 +997,9 @@ img {
 }
 
 .navbar-nav li {
-   &.active > a,
-  &.force-active > a,
-  > a:hover {
+   > a:hover,
+  &.active > a,
+  &.force-active > a {
     background: #f1f1f1;
     color: $palet-1;
   }
@@ -1007,11 +1012,10 @@ img {
   font-weight: bold;
 }
 
-
 .smooth-scroll-scrolling .navbar-nav li {
-  > a:focus,
-  &.active > a:focus,
-  &.force-active.active > a {
+   &.active > a:focus,
+  &.force-active.active > a,
+  > a:focus {
     background: #f1f1f1;
     color: $palet-1;
   }
@@ -1036,7 +1040,7 @@ ul.header-socialbtn {
       text-align: center;
 
       .fa {
-                  line-height: 20px;
+        line-height: 20px;
       }
     }
 
@@ -1069,9 +1073,9 @@ footer {
     }
 
     ul {
+      margin-bottom: 0;
       list-style-type: none;
       line-height: 2;
-      margin-bottom: 0;
 
       > li {
         position: relative;
@@ -1108,8 +1112,8 @@ footer {
   }
 
   #footer-pamphlet {
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
   }
 
   #footer-ad {
@@ -1539,9 +1543,9 @@ body#sitetop {
   }
 
   .navbar-nav li {
+     > a:hover,
     &.active > a,
-    &.force-active > a,
-    > a:hover {
+    &.force-active > a {
       background-color: $palet-3;
       color: $palet-1;
     }
@@ -1552,9 +1556,9 @@ body#sitetop {
   }
 
   .smooth-scroll-scrolling .navbar-nav li {
-     > a:focus,
-    &.active > a:focus,
-    &.force-active.active > a {
+     &.active > a:focus,
+    &.force-active.active > a,
+    > a:focus {
       background-color: $palet-1;
       color: $white;
     }
@@ -1580,12 +1584,39 @@ body#sitetop {
   }
 
   p {
-    font-size: 20px;
     color: $white;
+    font-size: 20px;
   }
 
   .btn-group .btn {
     width: 300px;
+  }
+
+  #countdown {
+    p {
+      margin-bottom: 0;
+    }
+
+    .countdown-clock {
+      margin-bottom: 20px;
+      color: $white;
+      font-family: 'Lato', sans-serif;
+
+      .countdown-clock-display {
+        display: inline-block;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        .countdown-clock-number {
+          font-size: 80px;
+          line-height: 1;
+        }
+
+        .countdown-clock-label {
+          font-size: 13px;
+        }
+      }
+    }
   }
 }
 
@@ -1617,8 +1648,8 @@ body#sitetop {
     font-size: 34px;
 
     small {
-      margin-top: 0.5em;
       display: block;
+      margin-top: 0.5em;
     }
   }
 
@@ -1641,9 +1672,9 @@ body#sitetop {
   }
 }
 @media(min-width:$screen-md-min) {
+  #entry,
   #point,
-  #yoko,
-  #entry {
+  #yoko {
     .container {
       width: 800px;
     }
@@ -1652,10 +1683,12 @@ body#sitetop {
 
 table {
   font-size: 13px;
+
   thead th {
     background-color: lighten($palet-1, 59%);
     color: $palet-1;
   }
+
   tbody th {
     background-color: lighten($gray-base, 98%);
   }
@@ -1681,8 +1714,8 @@ table {
     font-size: 34px;
 
     small {
-      margin-top: 0.5em;
       display: block;
+      margin-top: 0.5em;
     }
   }
 
