@@ -908,7 +908,7 @@ $table-border-color: $palet-1;
 }
 
 body {
-    position: relative;
+  position: relative;
   padding-top: 80px;
 }
 
@@ -1673,9 +1673,9 @@ body#sitetop {
   }
 }
 @media(min-width:$screen-md-min) {
-  #entry,
-  #point,
-  #yoko {
+  #points,
+  #guideline,
+  #entry {
     .container {
       width: 800px;
     }
@@ -1695,14 +1695,60 @@ table {
   }
 }
 
-#yoko {}
-
 .pageimage {
   height: 400px;
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+#points {
+  .points-title1,
+  .points-title2,
+  .points-title3,
+  .points-title4,
+  .points-title5 {
+    position: relative;
+    padding-left: 50px;
+
+    &:before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+    }
+  }
+  .points-title1:before {
+      content: url("../images/point-titile-point1.png");
+  }
+  .points-title2:before {
+      content: url("../images/point-titile-point2.png");
+  }
+  .points-title3:before {
+      content: url("../images/point-titile-point3.png");
+  }
+  .points-title4:before {
+      content: url("../images/point-titile-point4.png");
+  }
+  .points-title5:before {
+      content: url("../images/point-titile-point5.png");
+  }
+}
+
+#entry {
+  .panel.entry-message-shimekiri {
+    margin: auto;
+    max-width: 500px;
+    .panel-body {
+      .alert {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .entry-banner {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
 #top-news {
