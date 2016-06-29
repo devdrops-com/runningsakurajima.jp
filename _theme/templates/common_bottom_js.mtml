@@ -1,60 +1,14 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="<$mt:BlogRelativeURL$>js/common.js"></script>
-<script type="text/javascript" src="<$mt:BlogRelativeURL$>js/jquery.smooth-scroll.min.js"></script>
-<script>
-(function($) {
-  var $body = $('body'),
-    id = location.hash.replace('#', ''),
-    $target = id ? $($.find('#' + id)) : undefined,
-    stopReplacingState = $target && $target.length,
-    $navbarTarget = id ? $($.find('.navbar-right a[href="#' + id + '"]')).parent() : undefined;
+<!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  if (id) {
-    $($.find('body > a[name="' + id + '"]')).remove();
-  }
+  ga('create', 'UA-20091106-1', 'auto');
+  ga('send', 'pageview');
 
-  $body.scrollspy({
-    target: '.navbar-right',
-    offset: 100
-  })
-
-  if (history.replaceState) {
-    $('.navbar-right').on('activate.bs.scrollspy', function() {
-      if (stopReplacingState) {
-        return;
-      }
-
-      var $active = $('.navbar-right .active a');
-      if ($active.is(':visible')) {
-        history.replaceState('', '', $active.prop('href').replace(/.*#/, '#'));
-      } else {
-        history.replaceState('', '', location.href.replace(/#.*/, ''));
-      }
-    });
-  }
-
-  if (!$target || !$target.length) {
-    return;
-  }
-
-  $navbarTarget.addClass('force-active');
-  $target.prop('id', '');
-
-  $(window).load(function() {
-    setTimeout(function() {
-      $target.prop('id', id);
-
-      var pos = $target.offset().top - 50;
-      $body.addClass('smooth-scroll-scrolling');
-      $("html, body").animate({
-        scrollTop: pos
-      }, 750, "swing", function() {
-        stopReplacingState = false;
-        $body.removeClass('smooth-scroll-scrolling');
-        $navbarTarget.removeClass('force-active');
-      });
-    }, 300);
-  });
-})(jQuery);
 </script>
+<script src="<mt:WebsiteURL>scripts/vendor.js"></script>
+<script src="<mt:WebsiteURL>scripts/plugins.js"></script>
+<script src="<mt:WebsiteURL>scripts/main.js"></script>

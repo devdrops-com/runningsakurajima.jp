@@ -1,0 +1,966 @@
+@charset "utf-8";
+
+/*---------------------------
+- Title: Core style
+- Base: Vega
+- Author: http://vicuna.jp/
+
+- Theme name:
+- Modified by: YOUR NAME
+- Last modify: 2009.0307
+- Licence: MIT Licence
+---------------------------*/
+
+/*************************************************
+
+  Elements
+
+*************************************************/
+
+body {
+    background-color: #FFF;
+    color: #000;
+    font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS P Gothic", "Osaka", Verdana, Arial, Helvetica, sans-serif;
+    background-image: url(./images/body-background.png);
+    background-repeat: repeat-x;
+}
+
+a {
+    outline: none;
+}
+
+a:link {
+    color: #0066FF;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #0066FF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF0033;
+    text-decoration: underline;
+}
+
+blockquote {
+    margin-top: 1em;
+    margin-right: 20px;
+    margin-bottom: 1em;
+    margin-left: 20px;
+    padding-top: 0.5em;
+    padding-right: 20px;
+    padding-bottom: 0.5em;
+    padding-left: 20px;
+    background-color: #F6F6F6;
+    border: 1px solid #CCCCCC;
+}
+
+pre {
+    background-color: #FFFFFF;
+    overflow: auto;
+    width: 90%;
+    _width: 95%; /* for IE6 */
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #0066CC;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+strong {
+    font-weight: bold;
+}
+
+img {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    vertical-align: bottom;
+}
+
+address {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+    margin: 0;
+    padding: 0;
+}
+
+dl dt {
+    margin: 0;
+    padding: 0;
+    color: #0066ff;
+    font-weight: bold;
+}
+
+dl dd {
+    margin: 0;
+    padding: 0 0 5px 10px;
+}
+
+fieldset {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+legend {
+    background-color: #FFFFFF;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+}
+
+textarea {
+    padding-top: 0.5em;
+    padding-right: 10px;
+    padding-bottom: 0.5em;
+    padding-left: 10px;
+}
+
+input.submit {
+    font-size: 85%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100%;
+    border: 1px solid #CCCCCC;
+}
+
+caption {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+th,
+td {
+    padding-top: 0.5em;
+    padding-right: 10px;
+    padding-bottom: 0.3em;
+    padding-left: 10px;
+    border: 1px solid #CCCCCC;
+}
+
+th {
+    text-align: left;
+    vertical-align: top;
+    font-weight: bold;
+    background-color: #FDE6B5;
+    color: #222;
+}
+
+td {
+    text-align: left;
+    vertical-align: top;
+}
+
+hr {
+    margin: 0px;
+    padding: 0px;
+    height: 0px; 
+    border: none; 
+}
+* html hr {
+    border-top: 1px solid;
+} 
+*:first-child+html hr {
+    border-top: 1px solid;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-blue {
+    color: blue;
+}
+
+.background-color-red {
+    background-color: red;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.width-25percent {
+    width: 25%;
+}
+
+.width-100percent {
+    width: 100%;
+}
+
+.background-color-gray {
+    background-color: gray;
+}
+
+
+/*************************************************
+
+  div#header
+
+*************************************************/
+div#header {
+    background: url(./images/header-background.png) top center;
+    background-repeat: no-repeat;
+}
+
+div#header div.line {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+
+div#header ul#global-navigation {
+    height: 60px;
+    background: url(./images/header-navigation.png);
+    background-repeat: no-repeat;
+}
+
+div#header ul#global-navigation li {
+    float: left;
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+div#header ul#global-navigation li a {
+    display: block;
+    text-decoration: none;
+    text-indent: -9999px;
+    height: 60px;
+}
+
+div#header ul#global-navigation li.gn01 a { width: 188px; background: url(./images/header-navigation.png) 0px    top; }
+div#header ul#global-navigation li.gn02 a { width: 188px; background: url(./images/header-navigation.png) -188px top; }
+div#header ul#global-navigation li.gn03 a { width: 188px; background: url(./images/header-navigation.png) -376px top; }
+div#header ul#global-navigation li.gn04 a { width: 188px; background: url(./images/header-navigation.png) -564px top; }
+div#header ul#global-navigation li.gn05 a { width: 188px; background: url(./images/header-navigation.png) -752px top; }
+
+div#header ul#global-navigation li.gn01 a:hover { background-position: 0px    60px; }
+div#header ul#global-navigation li.gn02 a:hover { background-position: -188px 60px; }
+div#header ul#global-navigation li.gn03 a:hover { background-position: -376px 60px; }
+div#header ul#global-navigation li.gn04 a:hover { background-position: -564px 60px; }
+div#header ul#global-navigation li.gn05 a:hover { background-position: -752px 60px; }
+
+div#header p.catchcopy {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+}
+
+div#header p.open {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+
+div#header ul#header-menu  {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+div#header ul#header-menu li {
+    display: inline;
+}
+
+div#header ul#header-menu li span {
+    margin-left: 5px;
+    margin-right: 1px;
+}
+
+
+/*************************************************
+
+  div#content
+
+*************************************************/
+
+div#content {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+
+/*************************************************
+
+  div#main
+
+*************************************************/
+
+div#main {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+div#main p.topicPath {
+    font-size: 11px;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border: 1px solid #CCCCCC;
+}
+
+div#main p.topicPath span.current {
+    color: #021189;
+}
+
+div#main p.page {
+    margin-top: 20px;
+    text-align: center;
+}
+
+div#main p.page a.link_before {
+    background: url(./images/icon-arrow-left.png) no-repeat left center;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+div#main p.page a.link_next {
+    background: url(./images/icon-arrow-right.png) no-repeat right center;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+div#main p.page span.before {
+    background: url(./images/icon-arrow-left.png) no-repeat left center;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+div#main p.page span.next {
+    background: url(./images/icon-arrow-right.png) no-repeat right center;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+div#main p.return {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 11px;
+}
+
+div#main p.return a {
+    background: url(./images/icon-arrow-up.png) no-repeat left center;
+    padding-left: 15px;
+    padding-right: 30px;
+}
+
+div#main div#eyecatch,
+div#main div.entry,
+div#main div.list {
+    _height: 1px; /* for IE6 */
+    *min-height: 1px; /* for IE7 */
+    margin-top: 20px;
+}
+
+div#main div.entry h2,
+div#main div.list h2 {
+    letter-spacing: 0.1em;
+    font-size: 18px;
+	font-weight: bold;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    background-image: url(./images/main-h2-background.png);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+}
+
+div#main div.entry h2.image,
+div#main div.list h2.image {
+    background-image: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+div#main div.entry h2 a,
+div#main div.list h2 a {
+    text-decoration: none;
+}
+
+div#main div#eyecatch {
+    width: 700px;
+    height: 300px;
+    position:relative;
+    z-index: 100;
+}
+
+div#main div.entry div.textBody {
+    line-height: 1.5;
+}
+
+div#main div.entry div.textBody h3 {
+    margin-top: 2em;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: #222;
+}
+
+div#main div.entry div.textBody h4 {
+    margin-top: 1.5em;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+div#main div.entry div.textBody h5 {
+    margin-top: 1em;
+    padding-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #CCC;
+}
+
+div#main div.entry div.textBody p {
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
+div#main div.entry div.textBody p.date {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    font-size: 11px;
+    color: #999999;
+    float: left;
+    display: none;
+}
+
+div#main div.news div.textBody p.date {
+    display: block;
+}
+
+div#main div.entry div.textBody p.eyecatch {
+    margin-top: 0.5em;
+    margin-right: 1em;
+    margin-left: 1em;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    width: 240px;
+    height: 160px;
+    border: 0;
+    display: inline;
+    float: left;
+}
+
+div#main div.entry div.textBody p.eyecatch img {
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+div#main div.entry div.textBody ul.feedback {
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5em;
+    float: right;
+}
+
+div#main div.entry div.textBody ul.feedback li {
+    float: left;
+    list-style-type: none;
+    list-style-position: outside;
+    background-image: none;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottomp: 0;
+    margin-left: 5px;
+    padding: 0;
+}
+
+div#main div.entry div.textBody ul.bottom {
+    float: none;
+    margin-right: 5px;
+    margin-left: 0;
+    padding-top: 1em;
+    border-top-width: 1px;
+    border-top-style: dashed;
+    border-top-color: #CCCCCC;
+}
+
+div#main div.entry div.textBody ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div#main div.entry div.textBody ul li {
+    padding-left: 20px;
+    background: url(./images/icon-arrow-right.png) left top no-repeat;
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+div#main div.entry div.textBody ol {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div#main div.entry div.textBody ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-left: 10px;
+}
+
+div#main div.entry div.textBody table {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+div#main div.list ul {
+    line-height: 1.5;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-top-width: 1px;
+    border-top-style: dotted;
+    border-top-color: #CCCCCC;
+}
+
+div#main div.list ul li {
+    padding-top: 7px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    background: url(./images/icon-arrow-right.png) left center no-repeat;
+    list-style-type: none;
+    list-style-position: outside;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #CCCCCC;
+}
+
+div#main div.list ul li.category {
+    background: url(./images/icon-category.png) left center no-repeat;
+}
+
+div#main div.list ul li.category span.count {
+    display: none;
+}
+
+div#main div.list ul li.entry {
+    background: url(./images/icon-entry.png) left center no-repeat;
+}
+
+div#main div.list ul li.page {
+    background: url(./images/icon-page.png) left center no-repeat;
+}
+
+div#main div.list ul li.image {
+    background-image: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+div#main div.list ul li span.date {
+    margin: 0px;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+div#main div.sitemap div.textBody ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div#main div.sitemap div.textBody ul li {
+    padding-left: 20px;
+    background: url(./images/icon-arrow-right.png) left top no-repeat;
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+div#main div.sitemap div.textBody ul li.home {
+    background: url(./images/icon-home.png) left top no-repeat;
+}
+
+div#main div.sitemap div.textBody ul li.top-level-folder,
+div#main div.sitemap div.textBody ul li.folder {
+    background: url(./images/icon-folder.png) left top no-repeat;
+}
+
+div#main div.sitemap div.textBody ul li.page {
+    background: url(./images/icon-page.png) left top no-repeat;
+}
+
+div#main div.sitemap div.textBody ul li.top-level-category,
+div#main div.sitemap div.textBody ul li.category {
+    background: url(./images/icon-category.png) left top no-repeat;
+}
+
+div#main div.sitemap div.textBody ul li.entry {
+    background: url(./images/icon-entry.png) left top no-repeat;
+}
+
+div#main div.faq div.textBody ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div#main div.faq div.textBody ul li {
+    padding-left: 25px;
+    list-style-type: none;
+    list-style-position: outside;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 0.5em;
+    background-color: #F5F8FA;
+    background-image: url(./images/icon-question.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+div#main div.faq div.textBody dl {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div#main div.faq div.textBody dl dt {
+    padding-left: 25px;
+    list-style-type: none;
+    list-style-position: outside;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 0.5em;
+    background-color: #F5F8FA;
+    background-image: url(./images/icon-question.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+div#main div.faq div.textBody dl dd {
+    padding-left: 25px;
+    list-style-type: none;
+    list-style-position: outside;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 0.5em;
+    background-color: #F9EEEE;
+    background-image: url(./images/icon-answer.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+
+/*************************************************
+
+  div#utilities
+
+*************************************************/
+
+div#utilities {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+div#utilities div#left-sidebar,
+div#utilities div#right-sidebar {
+    margin: 0px;
+    padding: 0px;
+}
+
+div#utilities div.list,
+div#utilities div.entry,
+div#utilities div.banner {
+    _height: 1px; /* for IE6 */
+    *min-height: 1px; /* for IE7 */
+    margin-top: 20px;
+}
+
+div#utilities div.entry h2,
+div#utilities div.list h2 {
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    font-weight: bold;
+    background-image: url(./images/side-h2-background.png);
+    background-repeat: repeat-x;
+    background-position: left top;
+    color: #373737;
+}
+
+div#utilities div.entry h2.image,
+div#utilities div.list h2.image {
+    background-image: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+div#utilities div.list ul,
+div#utilities div.entry div.textBody {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+div#utilities div.list ul li {
+    margin-top: 0.5em;
+    padding-left: 20px;
+    padding-bottom: 0.4em;
+    background: url(./images/icon-entry.png) left top no-repeat;
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+div#utilities div.list ul li.category {
+    background: url(./images/icon-category.png) left top no-repeat;
+}
+
+div#utilities div.list ul li.category span.count {
+    display: none;
+}
+
+div#utilities div.list ul li.entry {
+    background: url(./images/icon-entry.png) left top no-repeat;
+}
+
+div#utilities div.list ul li.page {
+    background: url(./images/icon-page.png) left top no-repeat;
+}
+
+div#utilities div.list ul li.image {
+    margin: 0px;
+    padding: 0px;
+    background-image: none;
+}
+
+div#utilities div.list ul li span.date {
+    display: none;
+}
+
+div#utilities div.entry div.textBody p {
+    margin-top: 0.5em;
+}
+
+div#utilities p.banner {
+    _height: 1px; /* for IE6 */
+    *min-height: 1px; /* for IE7 */
+    margin-top: 20px;
+    position: relative;
+
+}
+
+div#utilities p.banner img {
+	box-shadow: 0px 0px 10px rgba(94, 94, 94, 1);
+}
+
+div#utilities p.banner span#countdown {
+    position: absolute;
+    top: 153px;
+    left: 25px;
+    width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div#utilities div.banner ul {
+    padding: 0px;
+    margin-top: -10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+div#utilities div.banner ul li {
+    list-style-type: none;
+    list-style-position: outside;
+    display: inline;
+    float: left;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+
+/*************************************************
+
+  div#footer
+
+*************************************************/
+
+div#footer {
+	background-image: url(./images/footer-background.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+div#footer div.support h2 {
+    padding-top: 5px;
+    padding-bottom: 0px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #F8B62D;
+}
+
+div#footer div.support div.banner ul {
+    padding-left: 28px;
+}
+
+div#footer div.support div.banner li {
+    list-style-type: none;
+    list-style-position: outside;
+    display: inline;
+    float: left;
+    margin-top: 1em;
+    margin-right: 28px;
+    margin-bottom: 1em;
+    margin-left: 0px;
+}
+
+div#footer div.box {
+    background-image: url(./images/footer-div-background.png);
+    height: 210px;
+}
+
+div#footer div.box p.return {
+    position: absolute;
+    top: 12px;
+    right: 0px;
+}
+
+div#footer div.box h2 {
+    position: absolute;
+    top: 75px;
+    right: 0px;
+}
+
+div#footer div.box ul#footer-menu li span,
+div#footer div.box ul#footer-sub-menu li span {
+    margin-left: 5px;
+    margin-right: 1px;
+}
+
+div#footer div.box ul#footer-menu {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+
+div#footer div.box ul#footer-menu li {
+    display: inline;
+}
+
+div#footer div.box address {
+    position: absolute;
+    top: 100px;
+    right: 220px;
+}
+
+div#footer div.box ul#footer-sub-menu {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+}
+
+div#footer div.box ul#footer-sub-menu li {
+    display: inline;
+}
+
+div#footer div.box p#copyright {
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+}
+
+
+/*************************************************
+
+    Clearfix
+
+*************************************************/
+
+div#content,
+div.entry div.textBody,
+div.banner,
+div.entry div.textBody ul.banner,
+div.entry div.textBody ul.feedback {
+    _height: 1px;
+    min-height: 1px;
+    /*\*//*/
+    height: 1px;
+    overflow: hidden;
+    /**/
+}
+
+div#content:after,
+div.entry div.textBody:after,
+div.banner:after,
+div.entry div.textBody ul.banner:after,
+div.entry div.textBody ul.feedback:after {
+    height: 0px;
+    visibility: hidden;
+    content: ".";
+    display: block;
+    clear: both;
+}
+
+.clear {
+    display: block;
+    clear: both;
+}
+
+div#main,
+div#utilities div#left-sidebar,
+div#utilities div#right-sidebar {
+    _overflow: hidden;
+}
+
+
+/* table-align
+---------------*/
+
+div.main-entry-record table th {
+	text-align: center;
+}
+
+div.main-entry-record table td {
+	text-align: center;
+}

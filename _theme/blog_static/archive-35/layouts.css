@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/*---------------------------
+- Title: Layout Module
+- Author: http://vicuna.jp/
+
+- Modified by: YOUR NAME
+- Last modify: 2009.0308
+- Licence: MIT Licence
+---------------------------*/
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+div#header,
+div#content {
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+}
+
+div#footer {
+    width: 100%;
+}
+
+div#footer div.support {
+    width: 940px;
+    margin: 30px auto 0;
+    position: relative;
+    text-align: left;
+}
+
+div#footer div.box {
+    width: 940px;
+    margin: 30px auto 0;
+    position: relative;
+    text-align: left;
+}
+
+
+/*========================================
+
+    Double Column Layout - Sidebar on left
+
+    <body class="double-left">
+
+    ┏┓┏━━━┓
+    ┃┃┃━━━┃
+    ┗┛┗━━━┛
+
+========================================*/
+
+body.double-left div#main {
+    width: 700px;
+    float: right;
+    position: relative;
+}
+
+/* Utilities
+---------------*/
+body.double-left div#utilities {
+    width: 220px;
+    float: left;
+    clear: left;
+    position: relative;
+}
+
+/* SNS Button
+---------------*/
+div#sns {
+	position: fixed;
+	bottom: 50px;
+	right: 0px;
+	z-index: 9999;
+	width: 80px;
+	text-align: center;
+	background-image: url(http://runningsakurajima.jp/images/sns-top.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+div#sns ul {
+	list-style-type: none;
+	margin-top: -5px;
+	background-image: url(http://runningsakurajima.jp/images/sns-bottom.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+div#sns ul li {
+	background-color: #222;
+	padding-top: 5px;
+	margin: 0px;
+	padding: 0px;
+}
+
+
