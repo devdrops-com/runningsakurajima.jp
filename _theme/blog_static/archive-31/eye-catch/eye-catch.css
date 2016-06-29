@@ -1,0 +1,75 @@
+/*
+* Required 
+*/
+.container {
+	width:940px;
+	height:300px;
+	overflow:hidden;
+	position:relative;
+	cursor:pointer;
+}
+.slides {
+	position:absolute;
+	top:0;
+	left:0;
+}
+.slides div {
+	position:absolute;
+	top:0;
+	width:940px;
+	display:none;
+}
+/*
+* Optional
+*/
+#loopedSlider {
+	width:940px;
+	position:relative;
+	clear:both;
+	margin: 0px;
+}
+a.previous {
+	position:absolute;
+	top:130px;
+	left:0px;
+	height: 50px;
+	width: 20px;
+	background: url(./images/previous.png) left top;
+	text-indent: -9999px;
+}
+a.previous:hover {
+	background-position: left 50px;
+}
+a.next {
+	position:absolute;
+	top:130px;
+	right:0px;
+	height: 50px;
+	width: 20px;
+	background: url(./images/next.png) left top;
+	text-indent: -9999px;
+}
+a.next:hover {
+	background-position: left 50px;
+}
+ul.pagination {
+	list-style-type: none;
+	position: absolute;
+	top: 280px;
+	right: 20px;
+}
+ul.pagination li {
+	float:left;
+	margin:0 5px;
+}
+ul.pagination a {
+	display:block;
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	background:url(./images/pagination.png) left top;
+	text-indent: -9999px;
+}
+ul.pagination li.active a {
+	background-position: left -16px
+}

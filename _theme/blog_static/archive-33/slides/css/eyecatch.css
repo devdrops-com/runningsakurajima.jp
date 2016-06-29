@@ -1,0 +1,64 @@
+div#main div#eyecatch {
+    position:relative;
+}
+div#main div#eyecatch ul.slides_container {
+    width:700px;
+    overflow:hidden;
+    position:relative;
+    display:none;
+}
+div#main div#eyecatch ul.slides_container li {
+    width:700px;
+    height:300px;
+    display:block;
+}
+div#main div#eyecatch .next,
+div#main div#eyecatch .prev {
+    position: absolute;
+    top: 125px;
+    left: 0;
+    width: 20px;
+    height: 50px;
+    overflow: hidden;
+    display: block;
+    z-index: 101;
+    text-indent: -9999px;
+}
+div#main div#eyecatch .prev {
+    background: url(../img/main-eyecatch-prev.png);
+}
+div#main div#eyecatch .next {
+    left: 680px;
+    background: url(../img/main-eyecatch-next.png);
+}
+div#main div#eyecatch .prev:hover,
+div#main div#eyecatch .next:hover {
+    background-position: left 50px;
+}
+div#main div#eyecatch .pagination {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    z-index: 102;
+}
+
+div#main div#eyecatch .pagination li {
+    float: left;
+    margin: 0 1px;
+    list-style: none;
+}
+
+div#main div#eyecatch .pagination li a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image:url(../img/main-eyecatch-pagination.png);
+    float: left;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+div#main div#eyecatch .pagination li.current a {
+    background-position:0 -12px;
+}
