@@ -15,8 +15,10 @@ elements:
       - archive-34
       - archive-35
       - archive-36
+      - fonts
       - images
-      - js
+      - scripts
+      - styles
     importer: blog_static_files
   custom_fields:
     component: commercial
