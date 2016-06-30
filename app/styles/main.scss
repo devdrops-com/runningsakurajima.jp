@@ -1000,9 +1000,9 @@ img {
 }
 
 .navbar-nav li {
-   > a:hover,
-  &.active > a,
-  &.force-active > a {
+   &.active > a,
+  &.force-active > a,
+  > a:hover {
     background: #f1f1f1;
     color: $palet-1;
   }
@@ -1016,9 +1016,9 @@ img {
 }
 
 .smooth-scroll-scrolling .navbar-nav li {
-   &.active > a:focus,
-  &.force-active.active > a,
-  > a:focus {
+   > a:focus,
+  &.active > a:focus,
+  &.force-active.active > a {
     background: #f1f1f1;
     color: $palet-1;
   }
@@ -1067,7 +1067,7 @@ footer {
 
   #footer-info {
     padding: 40px 0;
-    background: $turquoise;
+    background: $palet-1;
     color: $white;
   }
 
@@ -1144,8 +1144,6 @@ footer {
     text-align: center;
 
     p {
-      margin: 0;
-
       small {
         font-size: 100%;
       }
@@ -1547,9 +1545,9 @@ body#sitetop {
   }
 
   .navbar-nav li {
-     > a:hover,
-    &.active > a,
-    &.force-active > a {
+     &.active > a,
+    &.force-active > a,
+    > a:hover {
       background-color: $palet-3;
       color: $palet-1;
     }
@@ -1560,9 +1558,9 @@ body#sitetop {
   }
 
   .smooth-scroll-scrolling .navbar-nav li {
-     &.active > a:focus,
-    &.force-active.active > a,
-    > a:focus {
+     > a:focus,
+    &.active > a:focus,
+    &.force-active.active > a {
       background-color: $palet-1;
       color: $white;
     }
@@ -1794,12 +1792,12 @@ table {
       }
 
       &.access-flow-marker {
-        font-size: 20px;
+        // font-size: 20px;
         font-weight: bold;
 
         &:before {
-                  left: -40px;
-          top: -10px;
+          left: -40px;
+          top: -12px;
           font-size: 30px;
           color: $palet-5;
           content: '\f041';
@@ -1816,6 +1814,10 @@ table {
 
       &.access-flow-subway:before {
         content: '\f239';
+      }
+
+      &.access-flow-car:before {
+        content: '\f1b9';
       }
 
       &.access-flow-walk:before {
