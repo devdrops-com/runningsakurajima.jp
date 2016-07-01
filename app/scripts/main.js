@@ -98,7 +98,7 @@
   }).on('finish.countdown', function() {
     $(this).addClass('disabled');
   });
-  //ニュースのサムネイルの高さを揃える
+  // ニュースのサムネイルの高さを揃える
   $('#top-news .col-sm-3').tile(4);
   // スマートフォンの時のグローバルナビゲーションの動き
   var $body = $('body');

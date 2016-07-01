@@ -3,9 +3,9 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "jquery.tile.js": "https://github.com/urin/jquery.tile.js.git#^1.1.1",
-    "jquery-smooth-scroll": "^1.7.2",
     "font-awesome": "fontawesome#^4.6.3",
+    "jquery-smooth-scroll": "^1.7.2",
+    "jquery.tile.js": "https://github.com/urin/jquery.tile.js.git#^1.1.1",
     "jquery.countdown": "^2.1.0"
   },
   "overrides": {
@@ -25,6 +25,11 @@
     "jquery.tile.js": {
       "main": [
         "jquery.tile.min.js"
+      ]
+    },
+    "jquery.countdown": {
+      "main": [
+        "dist/jquery.countdown.min.js"
       ]
     }
   },
