@@ -54,13 +54,12 @@
       </mt:If>
     </mt:If>
     <div class="container<mt:If name="iposition" eq="上に配置"> image-top</mt:If>">
-      <h3><mt:PageTitle encode_html="1"></h3>
-      <div class="row">
-        <div class="col-sm-12">
-          <mt:PageBody>
-          <mt:PageMore>
-        </div>
-      </div>
+      <h3>
+        <mt:PageTitle encode_html="1">
+        <small><mt:PageBasename separator=" "></small>
+      </h3>
+      <mt:PageBody>
+      <mt:PageMore>
     </div>
     <mt:If name="iposition" eq="下に配置">
       <mt:If tag="CustomFieldValue" identifier="pageimage">
