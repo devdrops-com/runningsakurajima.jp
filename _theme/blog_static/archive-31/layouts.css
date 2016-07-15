@@ -1,0 +1,54 @@
+@charset "Shift-JIS";
+
+/*---------------------------
+- Title: Layout Module
+- Author: http://vicuna.jp/
+
+- Modified by: YOUR NAME
+- Last modify: 2009.0308
+- Licence: MIT Licence
+---------------------------*/
+
+body {
+	margin: 0;
+	text-align: center;
+}
+
+div#header,
+div#content,
+div.box {
+	width: 940px;
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+}
+
+
+
+/*========================================
+
+	Double Column Layout - Sidebar on left
+
+	<body class="double-left">
+
+	„¬„­„¬„ª„ª„ª„­
+	„«„«„«„ª„ª„ª„«
+	„¯„®„¯„ª„ª„ª„®
+
+========================================*/
+
+body.double-left div#main {
+	width: 700px;
+	float: right;
+	position: relative;
+}
+
+/* Utilities
+---------------*/
+
+body.double-left div#utilities {
+	width: 220px;
+	float: left;
+	clear: left;
+	position: relative;
+}

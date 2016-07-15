@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rsd version="1.0" xmlns="http://archipelago.phrasewise.com/rsd">
+<service>
+<engineName>Movable Type Pro 5.031</engineName>
+<engineLink>http://www.sixapart.com/movabletype/</engineLink>
+<homePageLink>http://runningsakurajima.jp/archive-2011/</homePageLink>
+<apis>
+<api name="MetaWeblog" preferred="true" apiLink="http://runningsakurajima.jp/mt/mt-xmlrpc.cgi" blogID="7" />
+<api name="MovableType" preferred="false" apiLink="http://runningsakurajima.jp/mt/mt-xmlrpc.cgi" blogID="7" />
+<api name="Blogger" preferred="false" apiLink="http://runningsakurajima.jp/mt/mt-xmlrpc.cgi" blogID="7" />
+<api name="Atom" preferred="false" apiLink="http://runningsakurajima.jp/mt/mt-atom.cgi/weblog" blogID="7" />
+</apis>
+</service>
+</rsd>
