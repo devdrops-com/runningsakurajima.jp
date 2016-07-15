@@ -9,7 +9,7 @@ elements:
   blog_static_files:
     component: '~'
     data:
-      - archive
+      - archives
       - fonts
       - images
       - scripts
