@@ -9,12 +9,7 @@ elements:
   blog_static_files:
     component: '~'
     data:
-      - archive-31
-      - archive-32
-      - archive-33
-      - archive-34
-      - archive-35
-      - archive-36
+      - archive
       - fonts
       - images
       - scripts
