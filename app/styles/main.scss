@@ -937,30 +937,32 @@ img {
   left: 0;
   z-index: 1000;
   margin-bottom: 0;
-  padding: 10px 0;
+  padding: 5px 0;
   width: 100%;
   border-bottom: solid 1px $white;
   border-radius: 0;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba($palet-1, 0.5);
   transition: all 0.2s ease-in-out 0s;
-}
 
-.sticky {
-  padding: 5px 0;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
+  .navbar-header {
+    margin: 5px 0;
+    text-align: left;
+    font-size: 22px;
 
-.navbar h1 {
-  text-align: left;
-  font-size: 22px;
+    a {
+      color: $palet-1;
+    }
 
-  a {
-    color: $palet-1;
+    // img {
+    //   transition: all 0.2s ease-in-out 0s;
+    // }
   }
 
-  img {
-    transition: all 0.2s ease-in-out 0s;
+  &.sticky {
+    padding: 5px 0;
+    // background: rgba(255, 255, 255, 0.20);
+    background-color: rgba($palet-1, 1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -968,17 +970,13 @@ img {
 //   transform: scale(0.8);
 // }
 
-.navbar-header {
-  margin: 0;
-}
-
 .navbar-collapse {
   padding-right: 0;
   padding-left: 0;
 
   .header-socialbtn {
     float: right;
-    margin-bottom: 0;
+    margin: 5px 0;
     padding-left: 1em;
 
     li {
@@ -990,6 +988,7 @@ img {
         margin-left: 5px;
         color: $white;
         font-size: 20px;
+        text-decoration: none;
       }
     }
   }
@@ -1112,7 +1111,6 @@ footer {
     }
   }
 }
-
 
 /* ------------------------------------------
              CONTENT COMMON STYLES
@@ -1374,7 +1372,7 @@ body#sitetop {
 
 #sitetop {
   .navbar {
-    background-color: rgba($palet-1, 1);
+    // background-color: rgba($palet-1, 1);
 
     h1 a {
       color: $white;
@@ -1389,9 +1387,9 @@ body#sitetop {
   }
 
   .navbar-nav li {
-     &.active > a,
-    &.force-active > a,
-    > a:hover {
+     > a:hover,
+    &.active > a,
+    &.force-active > a {
       background-color: $palet-3;
       color: $palet-1;
     }
@@ -1404,7 +1402,7 @@ body#sitetop {
   min-height: 400px;
   width: 100%;
   border-bottom: solid 1px #e9e9e9;
-  background-image: url("../images/toppage-background-image-00-sakurajima.jpg");
+  background-image: url("../images/toppage-background-sakurajima.jpg");
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
@@ -1589,13 +1587,13 @@ table {
   }
 
   .entry-banner {
-    text-align: center;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   .entry-button {
-    text-align: center;
     margin-bottom: 20px;
+    text-align: center;
 
     .btn {
       width: 80%;
@@ -1628,11 +1626,11 @@ table {
         font-weight: bold;
 
         &:before {
-          left: -40px;
           top: -12px;
-          font-size: 30px;
+          left: -40px;
           color: $palet-5;
           content: '\f041';
+          font-size: 30px;
         }
       }
 

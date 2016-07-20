@@ -10,19 +10,19 @@
 //     document.write(div.innerHTML);
 //   }
 // })();
-// // common head グローバルナビの高さ調整
-// (function() {
-//   'use strict';
-//   var $document = $(document);
-//   var $header = $('header');
-//   $(window).on('scroll', function() {
-//     if ($document.scrollTop() > 80) {
-//       $header.addClass('sticky');
-//     } else {
-//       $header.removeClass('sticky');
-//     }
-//   });
-// })();
+// common head グローバルナビの高さ調整
+(function() {
+  'use strict';
+  var $document = $(document);
+  var $header = $('header');
+  $(window).on('scroll', function() {
+    if ($document.scrollTop() > 80) {
+      $header.addClass('sticky');
+    } else {
+      $header.removeClass('sticky');
+    }
+  });
+})();
 // // common bottom
 // (function() {
 //   'use strict';
