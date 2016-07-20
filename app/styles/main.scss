@@ -987,8 +987,8 @@ img {
       a {
         margin-left: 5px;
         color: $white;
-        font-size: 20px;
         text-decoration: none;
+        font-size: 20px;
       }
     }
   }
@@ -1387,9 +1387,9 @@ body#sitetop {
   }
 
   .navbar-nav li {
-     > a:hover,
-    &.active > a,
-    &.force-active > a {
+     &.active > a,
+    &.force-active > a,
+    > a:hover {
       background-color: $palet-3;
       color: $palet-1;
     }
