@@ -10,6 +10,7 @@ elements:
     component: '~'
     data:
       - archives
+      - downloads
       - fonts
       - images
       - scripts
