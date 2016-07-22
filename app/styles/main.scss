@@ -1060,6 +1060,7 @@ footer {
   font-size: 13px;
 
   #footer-info {
+    margin-bottom: 30px;
     padding: 40px 0;
     background: $palet-1;
     color: $white;
@@ -1122,8 +1123,6 @@ footer {
   }
 
   #footer-ad {
-    margin-top: 30px;
-
     .row {
       @media (max-width: $screen-xs-max) {
         margin-right: -5px;
@@ -1205,7 +1204,7 @@ footer {
 #mainvisual-lower {
   position: relative;
   padding: 3.5em 0;
-  background: url("../images/toppage-background-image-00-sakurajima.jpg") no-repeat center bottom;
+  background: url("../images/toppage-background-run.jpg") no-repeat center center;
   background-size: cover;
   color: $white;
   text-shadow: 0 1px 0 $black;
@@ -1443,9 +1442,9 @@ body#sitetop {
   }
 
   .navbar-nav li {
-     > a:hover,
-    &.active > a,
-    &.force-active > a {
+     &.active > a,
+    &.force-active > a,
+    > a:hover {
       background-color: $palet-3;
       color: $palet-1;
     }
@@ -1528,7 +1527,6 @@ body#sitetop {
     position: absolute;
     top: 50%;
     right: 10%;
-
     @include animation-name(c);
     @include animation-duration(2s);
     @include animation-timing-function(ease-in-out);
