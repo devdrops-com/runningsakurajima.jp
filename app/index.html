@@ -31,7 +31,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,100" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]><script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
   </head>
 
@@ -64,12 +64,14 @@
     </header>
     <section id="mainvisual">
       <div class="container">
+        <div class="mainvisual-hashtag"><img src="./images/mainvisual-runsaku.png" alt="#runsaku"></div>
         <h2><img src="./images/mainvisual-symbol.png" alt="ランニング桜島 2016/12/4 START!"></h2>
         <div id="countdown">
           <p>第37回 ランニング桜島開催まであと</p>
           <div class="countdown-clock"></div>
         </div>
-        <p><img src="./images/mainvisual-place-event.png" alt=""></p>
+        <p><img src="./images/mainvisual-present.png" alt="オーストラリア・ゴールドコーストマラソンに抽選でペア1組をご招待！"></p>
+        <p><img src="./images/mainvisual-place-event.png" alt="会場：桜島多目的広場（鹿児島市桜島横山町） 種目：ハーフマラソン・10km・5km"></p>
       </div>
     </section>
     <section class="webpages" id="points">
@@ -142,8 +144,7 @@
             <col class="col-xs-3">
             <col class="col-xs-1">
             <col class="col-xs-1">
-            <col class="col-xs-3">
-          </colgroup>
+            <col class="col-xs-3"> </colgroup>
           <thead>
             <tr>
               <th>種目</th>
@@ -352,8 +353,8 @@
         <div class="clearfix"></div>
         <br>
         <div class="row">
-          <div class="col-xs-6"><img src="./images/course-map-annai.png" alt=""></div>
-          <div class="col-xs-6"><img src="./images/course-map-koteizu.png" alt=""></div>
+          <div class="col-xs-12 col-sm-6"><img src="./images/course-map-annai.png" alt=""></div>
+          <div class="col-xs-12 col-sm-6"><img src="./images/course-map-koteizu.png" alt=""></div>
         </div>
       </div>
     </section>
@@ -363,8 +364,8 @@
         <p>本大会への手続きは「インターネットからのお申し込み」または「専用振り替え用紙からのお申し込み」のいずれかの方法で承っております。
           <br>参加を希望する場合は、下記「お申し込み規約」と「個人情報の取り扱いについて」をよくお読みになりお申し込みください。</p>
         <ul>
-          <li><a data-toggle="modal" data-target="#entry-rules">申込規約・誓約</a>&nbsp;<span class="fa fa-clone" aria-hidden="true"></span></li>
-          <li><a data-toggle="modal" data-target="#entry-privacy">個人情報の取り扱いについて</a>&nbsp;<span class="fa fa-clone" aria-hidden="true"></span></li>
+          <li><a href="" data-toggle="modal" data-target="#entry-rules">申込規約・誓約</a>&nbsp;<span class="fa fa-clone" aria-hidden="true"></span></li>
+          <li><a href="" data-toggle="modal" data-target="#entry-privacy">個人情報の取り扱いについて</a>&nbsp;<span class="fa fa-clone" aria-hidden="true"></span></li>
         </ul>
         <div class="modal fade" id="entry-rules" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
@@ -394,7 +395,7 @@
                 </ol>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-times" aria-hidden="true"></span>Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-times" aria-hidden="true"></span>&nbsp;Close</button>
               </div>
             </div>
           </div>
@@ -411,7 +412,7 @@
                 <p>また、主催者もしくは委託先からの申込内容に関する確認連絡をさせていただくことがあります。</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-times" aria-hidden="true"></span>Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-times" aria-hidden="true"></span>&nbsp;Close</button>
               </div>
             </div>
           </div>
@@ -420,8 +421,7 @@
           <div class="panel-heading">お申し込み締切日</div>
           <div class="panel-body">
             <p>平成２７年９月３０日（水）</p>
-            <div class="alert alert-danger" role="alert"><span class="fa fa-info-circle" aria-hidden="true"></span>お申し込み受付は終了いたしました。</div>
-          </div>
+            <!-- <div class="alert alert-danger" role="alert"><span class="fa fa-info-circle" aria-hidden="true"></span>&nbsp;お申し込み受付は終了いたしました。</div> --></div>
         </div>
         <h4>インターネットからのお申し込み</h4>
         <p>下記サイトよりお申し込みを行ってください。
@@ -447,159 +447,155 @@
     <section class="webpages" id="flow">
       <div class="container">
         <h3>大会当日の流れ <small>flow</small></h3>
-        <div class="row">
-          <div class="col-sm-12">
-            <ul class="timeline">
-              <li>
-                <div class="tldate"><span class="fa fa-clock-o" aria-hidden="true"></span>07:30</div>
-              </li>
-              <li>
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>受付会場に到着</h4></div>
-                  <div class="tl-body">
-                    <p>ナンバーカード通知ハガキ（以下「ハガキ」という）をお持ちになり受付会場（桜島溶岩グラウンド）へお越しください。</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>参加賞の授与</h4></div>
-                  <div class="tl-body">
-                    <p>受付の担当者がハガキを基に名簿を確認しハガキに処理済印を押印します。</p>
-                    <p>ハガキの返却と同時にナンバーカード・記録計測用チップなどが入った袋と参加賞・大会誌が入ったキャリーバッグを受け取ってください。</p>
-                    <p>続けて、処理済印が押印されたハガキを持ってＴシャツ引換所へ移動し、ハガキに書いてあるサイズ（参加申込時に記載されたサイズ）Ｔシャツを受け取ってください。</p>
-                    <p class="text-danger">※Ｔシャツサイズの変更はできません。</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-panel noarrow">
-                  <div class="tl-heading">
-                    <h4>手荷物預かりサービスについて</h4></div>
-                  <div class="tl-body">
-                    <p>ヤマト運輸株式会社による、手荷物預かりサービスがございます。
-                      <br>料金 １箱５００円
-                      <br>サイズ ４３０ｍｍ✕３５０ｍｍ✕３１０ｍｍ</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>開会式会場へ移動</h4></div>
-                  <div class="tl-body">
-                    <p>受付が終わったら、開会式に遅れないよう開会式会場（桜島多目的広場）へ移動してください。</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="tldate"><span class="fa fa-clock-o" aria-hidden="true"></span>09:00</div>
-              </li>
-              <li>
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>開会式</h4></div>
-                  <div class="tl-body">
-                    <p>開会式会場にご参加ください。</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="tldate"><span class="fa fa-clock-o" aria-hidden="true"></span>10:00</div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>ハーフマラソン スタート</h4></div>
-                  <div class="tl-body">
-                    <p>ハーフマラソンのスタート地点はＡコープ前の通路になります。</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>５ｋｍ スタート</h4></div>
-                  <div class="tl-body">
-                    <p>５ｋｍのスタート地点は第１溶岩グランド前の通路になります。</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="tldate"><span class="fa fa-clock-o" aria-hidden="true"></span>10:10</div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>１０ｋｍ スタート</h4></div>
-                  <div class="tl-body">
-                    <p>１０ｋｍのスタート地点はＡコープ前の通路になります。</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="tldate">ゴール</div>
-              </li>
-              <li>
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>完走記録証の授与</h4></div>
-                  <div class="tl-body">
-                    <p>ゴール会場（桜島多目的広場）にて完走記録証を受け取ってください。</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>ふれあい賞の抽選</h4></div>
-                  <div class="tl-body">
-                    <p>ゴール会場（桜島多目的広場）にてふれあい賞の抽選を行っております。完走者の中から抽選により地元特産品などの商品を進呈いたします。</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>表彰</h4></div>
-                  <div class="tl-body">
-                    <p>年代別に上位から３位までの方に記録認定証と盾を授与します。</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="tl-circ"></div>
-                <div class="timeline-panel">
-                  <div class="tl-heading">
-                    <h4>お楽しみ抽選会</h4></div>
-                  <div class="tl-body">
-                    <p>参加者の中から抽選で豪華プレゼントを進呈いたします。</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-panel noarrow">
-                  <div class="tl-heading">
-                    <h4>閉会式は特に行いません。</h4></div>
-                  <div class="tl-body">
-                    <p>各自のご旅程にお戻りください。</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <ul class="timeline">
+          <li>
+            <div class="tldate"><span class="fa fa-clock-o" aria-hidden="true"></span>07:30</div>
+          </li>
+          <li>
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>受付会場に到着</h4></div>
+              <div class="tl-body">
+                <p>ナンバーカード通知ハガキ（以下「ハガキ」という）をお持ちになり受付会場（桜島溶岩グラウンド）へお越しください。</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>参加賞の授与</h4></div>
+              <div class="tl-body">
+                <p>受付の担当者がハガキを基に名簿を確認しハガキに処理済印を押印します。</p>
+                <p>ハガキの返却と同時にナンバーカード・記録計測用チップなどが入った袋と参加賞・大会誌が入ったキャリーバッグを受け取ってください。</p>
+                <p>続けて、処理済印が押印されたハガキを持ってＴシャツ引換所へ移動し、ハガキに書いてあるサイズ（参加申込時に記載されたサイズ）Ｔシャツを受け取ってください。</p>
+                <p class="text-danger">※Ｔシャツサイズの変更はできません。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-panel noarrow">
+              <div class="tl-heading">
+                <h4>手荷物預かりサービスについて</h4></div>
+              <div class="tl-body">
+                <p>ヤマト運輸株式会社による、手荷物預かりサービスがございます。
+                  <br>料金 １箱５００円
+                  <br>サイズ ４３０ｍｍ✕３５０ｍｍ✕３１０ｍｍ</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>開会式会場へ移動</h4></div>
+              <div class="tl-body">
+                <p>受付が終わったら、開会式に遅れないよう開会式会場（桜島多目的広場）へ移動してください。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tldate"><span class="fa fa-clock-o" aria-hidden="true"></span>09:00</div>
+          </li>
+          <li>
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>開会式</h4></div>
+              <div class="tl-body">
+                <p>開会式会場にご参加ください。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tldate"><span class="fa fa-clock-o" aria-hidden="true"></span>10:00</div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>ハーフマラソン スタート</h4></div>
+              <div class="tl-body">
+                <p>ハーフマラソンのスタート地点はＡコープ前の通路になります。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>５ｋｍ スタート</h4></div>
+              <div class="tl-body">
+                <p>５ｋｍのスタート地点は第１溶岩グランド前の通路になります。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tldate"><span class="fa fa-clock-o" aria-hidden="true"></span>10:10</div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>１０ｋｍ スタート</h4></div>
+              <div class="tl-body">
+                <p>１０ｋｍのスタート地点はＡコープ前の通路になります。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tldate">ゴール</div>
+          </li>
+          <li>
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>完走記録証の授与</h4></div>
+              <div class="tl-body">
+                <p>ゴール会場（桜島多目的広場）にて完走記録証を受け取ってください。</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>ふれあい賞の抽選</h4></div>
+              <div class="tl-body">
+                <p>ゴール会場（桜島多目的広場）にてふれあい賞の抽選を行っております。完走者の中から抽選により地元特産品などの商品を進呈いたします。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>表彰</h4></div>
+              <div class="tl-body">
+                <p>年代別に上位から３位までの方に記録認定証と盾を授与します。</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="tl-circ"></div>
+            <div class="timeline-panel">
+              <div class="tl-heading">
+                <h4>お楽しみ抽選会</h4></div>
+              <div class="tl-body">
+                <p>参加者の中から抽選で豪華プレゼントを進呈いたします。</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-panel noarrow">
+              <div class="tl-heading">
+                <h4>閉会式は特に行いません。</h4></div>
+              <div class="tl-body">
+                <p>各自のご旅程にお戻りください。</p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="webpages pageeven" id="access">
@@ -784,7 +780,7 @@
         <div><a class="btn btn-primary" href="#" role="button">募集パンフレット（ＰＤＦ）&nbsp;<span class="fa fa-download" aria-hidden="true"></span></a></div>
       </div>
     </section>
-    <section id="top-news">
+    <section class="webpages" id="top-news">
       <div class="container">
         <h3>ニュース<small>news</small></h3>
         <div class="row">
@@ -819,6 +815,9 @@
         </div>
       </div>
     </section>
+    <div id="return-pagetop">
+      <a href="./#mainvisual"><img src="./images/return-pagetop.png" alt="このページのトップに戻る"></a>
+    </div>
     <footer>
       <div id="footer-info">
         <div class="container">
@@ -857,14 +856,12 @@
             </div>
           </div>
           <div class="row">
-            <div id="footer-address" class="col-sm-6">
-              <address><strong>ランニング桜島大会実行委員会事務局</strong><br>〒892-8677 鹿児島県鹿児島市山下町11-1（鹿児島市観光交流局スポーツ課内）<br>
+            <div id="footer-address" class="col-sm-6"> <address><strong>ランニング桜島大会実行委員会事務局</strong><br>〒892-8677 鹿児島県鹿児島市山下町11-1（鹿児島市観光交流局スポーツ課内）<br>
                 <abbr title="電話番号"><span class="fa fa-phone-square" aria-hidden="true"></span></abbr>&nbsp;<span class="lead">099-803-9621</span><br>
-                <abbr title="受付時間"><span class="fa fa-clock-o" aria-hidden="true"></span></abbr>&nbsp;8:30～17:15（土・日祝日は休業です） </address>
-            </div>
+                <abbr title="受付時間"><span class="fa fa-clock-o" aria-hidden="true"></span></abbr>&nbsp;8:30～17:15（土・日祝日は休業です） </address> </div>
             <div id="footer-pamphlet" class="col-sm-6">
               <p>募集パンフレットをＰＤＦにてご覧いただけます。</p>
-              <div><a class="btn btn-primary" href="#" role="button">募集パンフレット（ＰＤＦ）&nbsp;<span class="fa fa-download" aria-hidden="true"></span></a></div>
+              <div><a class="btn btn-default" href="#" role="button">募集パンフレット（ＰＤＦ）&nbsp;<span class="fa fa-download" aria-hidden="true"></span></a></div>
             </div>
           </div>
         </div>
@@ -909,16 +906,23 @@
               </ul>
             </dd><dt>特別協賛</dt>
             <dd>
-              <ul class="list-inline pull-left">
+              <ul class="list-inline">
                 <li><img src="./images/footer-ntt-nishinihon.png" alt="ＮＴＴ西日本"></li>
-              </ul>
-              <ul class="list-inline pull-right">
                 <li><img src="./images/footer-runtes.png" alt="RUNTES"></li>
                 <li><img src="./images/footer-runners-chip.png" alt="Runners Chip"></li>
               </ul>
-              <div class="clearfix"></div>
             </dd>
           </dl>
+        </aside>
+        <aside id="footer-links">
+          <div class="row">
+            <div class="col-xs-offset-3 col-xs-3">
+              <a href="http://www.sakurajima-kinkowan-geo.jp/" target="_blank"><img src="./images/banner-sakurajima-kinkowan-geo.png" alt="桜島・錦江湾ジオパーク"></a>
+            </div>
+            <div class="col-xs-3">
+              <a href="http://www.meijiishin150countdown.com/" target="_blank"><img src="./images/banner-meijiishin150countdown.png" alt="明治維新150周年 維新のふるさと鹿児島市"></a>
+            </div>
+          </div>
         </aside>
         <div id="footer-logoarea">
           <p><small>&copy;RUNNING SAKURAJIMA</small></p>
