@@ -72,20 +72,19 @@
 //     }, 300);
 //   });
 // })();
-// // 共通
-// (function() {
-//   'use strict';
-//   // $('body').scrollspy({target: '#navbar-example'});
-//   // $('body').scrollspy({target: '.navbar-collapse.collapse.navbar-right', offset: 100});
-//   // パネルをトグル化
-//   $('.panel.panel-toggle .panel-heading').on('click', function() {
-//     $(this).toggleClass('is-close');
-//     $(this).next('.panel-body').slideToggle();
-//   });
-//   if ($(window).width() < 768) {
-//     $('.panel.panel-toggle .panel-heading').trigger('click');
-//   }
-// })();
+// 共通
+(function() {
+  'use strict';
+  $('body').scrollspy({target: '#global-navigation', offset: 100});
+  // パネルをトグル化
+  $('.panel.panel-toggle .panel-heading').on('click', function() {
+    $(this).toggleClass('is-close');
+    $(this).next('.panel-body').slideToggle();
+  });
+  if ($(window).width() < 768) {
+    $('.panel.panel-toggle .panel-heading').trigger('click');
+  }
+})();
 // トップページ
 (function() {
   'use strict';
@@ -102,6 +101,7 @@
   $('#top-news .col-sm-3').tile(4);
   // スマートフォンの時のグローバルナビゲーションの動き
   var $body = $('body');
+  $('#return-pagetop a').smoothScroll();
   $('.navbar-scroll a').smoothScroll({
     beforeScroll: function() {
       $body.addClass('smooth-scroll-scrolling');
