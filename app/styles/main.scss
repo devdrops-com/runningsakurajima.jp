@@ -954,7 +954,7 @@ img {
   width: 100%;
   border-bottom: solid 1px $white;
   border-radius: 0;
-  background-color: rgba($palet-1, 0.5);
+  background-color: rgba($white, 0.5);
   transition: all 0.2s ease-in-out 0s;
 
   .navbar-header {
@@ -1027,7 +1027,7 @@ img {
       > a {
         padding: 5px 10px;
         background: transparent;
-        color: $palet-1;
+        // color: $palet-1;
         font-weight: bold;
 
         &:hover {
@@ -1429,6 +1429,8 @@ body#sitetop {
 
 #sitetop {
   .navbar {
+    background-color: rgba($palet-1, 0.5);
+
     h1 a {
       color: $white;
     }
@@ -1442,9 +1444,9 @@ body#sitetop {
   }
 
   .navbar-nav li {
-     &.active > a,
-    &.force-active > a,
-    > a:hover {
+     > a:hover,
+    &.active > a,
+    &.force-active > a {
       background-color: $palet-3;
       color: $palet-1;
     }
