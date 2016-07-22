@@ -33,17 +33,18 @@
 
 <mt:Include module="header">
 
-<section id="mainvisual">
-  <div class="container">
-    <h2><img src="<mt:BlogURL encode_html="1">images/mainvisual-symbol.png" alt="ランニング桜島 2016/12/4 START!"></h2>
-    <div id="countdown">
-      <p>第37回 ランニング桜島開催まであと</p>
-      <div class="countdown-clock"></div>
-    </div>
-    <p><img src="<mt:BlogURL encode_html="1">images/mainvisual-place-event.png" alt=""></p>
-
-  </div>
-</section>
+    <section id="mainvisual">
+      <div class="container">
+        <div class="mainvisual-hashtag"><img src="<mt:WebsiteURL>images/mainvisual-runsaku.png" alt="#runsaku"></div>
+        <h2><img src="<mt:WebsiteURL>images/mainvisual-symbol.png" alt="ランニング桜島 2016/12/4 START!"></h2>
+        <div id="countdown">
+          <p>第37回 ランニング桜島開催まであと</p>
+          <div class="countdown-clock"></div>
+        </div>
+        <p><img src="<mt:WebsiteURL>images/mainvisual-present.png" alt="オーストラリア・ゴールドコーストマラソンに抽選でペア1組をご招待！"></p>
+        <p><img src="<mt:WebsiteURL>images/mainvisual-place-event.png" alt="会場：桜島多目的広場（鹿児島市桜島横山町） 種目：ハーフマラソン・10km・5km"></p>
+      </div>
+    </section>
 
 <mt:Pages no_folder="1">
   <mt:SetVarBlock name="iposition"><mt:CustomFieldValue identifier="imageposition" /></mt:SetVarBlock>
@@ -72,7 +73,7 @@
 <mt:If name="entrycount" gt="0">
   <section id="top-news">
     <div class="container">
-      <h3>ニュース</h3>
+      <h3>ニュース <small>news</small></h3>
       <div class="row">
         <mt:Entries lastn="4">
           <a href="<mt:EntryPermalink>" class="col-sm-3">
