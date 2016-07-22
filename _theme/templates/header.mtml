@@ -1,42 +1,19 @@
 <header class="navbar">
   <div class="container">
-    <h1 class="navbar-header navbar-scroll">
-      <a href="#sitetop" class="brand"><img src="<mt:WebsiteURL>images/header-logo.png" alt="<mt:BlogName>"></a>
-      <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-        <span class="fa fa-list"></span>
-      </button>
-    </h1>
-    <nav class="navbar-collapse collapse">
+    <h1 class="navbar-header navbar-scroll"><a href="#sitetop" class="brand"><img src="<mt:WebsiteURL>images/header-logo.png" alt="<mt:BlogName>"></a><button class="navbar-toggle collapsed" data-target="#global-navigation" data-toggle="collapse" type="button"><span class="fa fa-list"></span></button></h1>
+    <nav id="global-navigation" class="navbar-collapse collapse">
       <ul class="header-socialbtn">
-        <li class="facebook">
-          <a href="https://www.facebook.com/runningsakurajima/" target="_blank">
-            <span class="fa fa-facebook-official" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li class="Instagram">
-          <a href="https://www.instagram.com/runningsakurajima/" target="_blank">
-            <span class="fa fa-instagram" aria-hidden="true"></span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/runningsakurajima/" target="_blank">
-            #RUNSAKU
-          </a>
-        </li>
+        <li class="facebook"><a href="https://www.facebook.com/runningsakurajima/" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a></li>
+        <li class="Instagram"><a href="https://www.instagram.com/runningsakurajima/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
+        <li><a href="https://www.instagram.com/explore/tags/runsaku/" target="_blank">#RUNSAKU</a></li>
       </ul>
       <div class="clearfix"></div>
       <ul class="nav navbar-nav navbar-scroll">
-        <li>
-          <a href="<mt:WebsiteURL>#mainvisual">ホーム</a>
-        </li>
+        <li><a href="<mt:WebsiteURL>#mainvisual">ホーム</a></li>
         <mt:Pages no_folder="1">
-          <li>
-            <a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:PageTitle encode_html="1"></a>
-          </li>
+          <li><a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:PageTitle encode_html="1"></a></li>
         </mt:Pages>
-        <li>
-          <a href="<mt:WebsiteURL>#top-news">ニュース</a>
-        </li>
+        <li><a href="<mt:WebsiteURL>#top-news">ニュース</a></li>
       </ul>
     </nav>
   </div>

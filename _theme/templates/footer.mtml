@@ -7,16 +7,12 @@
       <div id="footer-menu" class="row">
         <div class="col-sm-6">
           <p class="footer-menu-title">メニュー</p>
-          <ul>
+          <ul class="footer-menu-toppage">
             <li><a href="<mt:WebsiteURL>#mainvisual">ホーム</a></li>
             <mt:Pages>
-              <li>
-                <a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:PageTitle encode_html="1"></a>
-              </li>
+              <li><a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:PageTitle encode_html="1"></a></li>
             </mt:Pages>
-            <li>
-              <a href="<mt:WebsiteURL>#top-news">ニュース</a>
-            </li>
+            <li><a href="<mt:WebsiteURL>#top-news">ニュース</a></li>
           </ul>
         </div>
         <div class="col-sm-3">
@@ -38,24 +34,12 @@
         <div class="col-sm-3">
           <p class="footer-menu-title">過去の大会</p>
           <ul>
-            <li>
-              <a href="<mt:WebsiteURL>archives/31/" target="_blank">第31回 <span class="fa fa-external-link" aria-hidden="true"></span></a>
-            </li>
-            <li>
-              <a href="<mt:WebsiteURL>archives/32/" target="_blank">第32回 <span class="fa fa-external-link" aria-hidden="true"></span></a>
-            </li>
-            <li>
-              <a href="<mt:WebsiteURL>archives/33/" target="_blank">第33回 <span class="fa fa-external-link" aria-hidden="true"></span></a>
-            </li>
-            <li>
-              <a href="<mt:WebsiteURL>archives/34/" target="_blank">第34回 <span class="fa fa-external-link" aria-hidden="true"></span></a>
-            </li>
-            <li>
-              <a href="<mt:WebsiteURL>archives/35/" target="_blank">第35回 <span class="fa fa-external-link" aria-hidden="true"></span></a>
-            </li>
-            <li>
-              <a href="<mt:WebsiteURL>archives/36/" target="_blank">第36回 <span class="fa fa-external-link" aria-hidden="true"></span></a>
-            </li>
+            <li><a href="<mt:WebsiteURL>archives/31/" target="_blank">第31回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/32/" target="_blank">第32回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/33/" target="_blank">第33回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/34/" target="_blank">第34回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/35/" target="_blank">第35回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/36/" target="_blank">第36回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
           </ul>
         </div>
       </div>
@@ -84,13 +68,17 @@
     </div>
   </div>
   <div class="container">
-    <aside id="footer-ad">
-      <div class="row">
-        <mt:Assets lastn="0" type="image" field:NcImageAd="1">
-          <div class="col-xs-3"><a href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a></div>
-        </mt:Assets>
-      </div>
-    </aside>
+    <mt:Assets lastn="0" type="image" field:NcImageAd="1">
+      <mt:AssetsHeader>
+        <aside id="footer-ad">
+          <div class="row">
+      </mt:AssetsHeader>
+      <div class="col-xs-3"><a href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a></div>
+      <mt:AssetsFooter>
+          </div>
+        </aside>
+      </mt:AssetsFooter>
+    </mt:Assets>
     <aside>
       <dl class="dl-horizontal">
         <dt>主催</dt>
@@ -120,10 +108,8 @@
         </dd>
         <dt>特別協賛</dt>
         <dd>
-          <ul class="list-inline pull-left">
+          <ul class="list-inline">
             <li><img src="<mt:WebsiteURL>images/footer-ntt-nishinihon.png" alt="ＮＴＴ西日本"></li>
-          </ul>
-          <ul class="list-inline pull-right">
             <li><img src="<mt:WebsiteURL>images/footer-runtes.png" alt="RUNTES"></li>
             <li><img src="<mt:WebsiteURL>images/footer-runners-chip.png" alt="Runners Chip"></li>
           </ul>
