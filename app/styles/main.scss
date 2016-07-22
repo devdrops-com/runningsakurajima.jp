@@ -931,6 +931,19 @@ img {
   }
 }
 
+.btn {
+  white-space: normal;
+}
+
+.modal .modal-footer {
+  text-align: center;
+}
+
+.navbar,
+.panel .panel-body p {
+  margin-bottom: 0;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -955,8 +968,8 @@ img {
 
     .navbar-toggle {
       margin-top: 0;
-      margin-bottom: 0;
       margin-right: 0;
+      margin-bottom: 0;
       padding-bottom: 7px;
       border: solid 1px $gray-light;
       background: $gray-lighter;
@@ -1029,6 +1042,19 @@ img {
     }
   }
 }
+@media (max-width: 767px) {
+  .navbar-collapse .header-socialbtn {
+    float: none;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+#return-pagetop {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+}
 
 footer {
   font-size: 13px;
@@ -1096,7 +1122,27 @@ footer {
   }
 
   #footer-ad {
-    margin-top: 20px;
+    margin-top: 30px;
+
+    .row {
+      @media (max-width: $screen-xs-max) {
+        margin-right: -5px;
+        margin-left: -5px;
+      }
+
+      [class^="col-"] {
+        margin-bottom: 20px;
+        text-align: center;
+        @media (max-width: $screen-xs-max) {
+          padding-right: 5px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
+  #footer-links {
+    margin-top: 30px;
 
     .row {
       @media (max-width: $screen-xs-max) {
@@ -1118,10 +1164,8 @@ footer {
   #footer-logoarea {
     text-align: center;
 
-    p {
-      small {
-        font-size: 100%;
-      }
+    p small {
+      font-size: 100%;
     }
   }
 }
@@ -1386,8 +1430,6 @@ body#sitetop {
 
 #sitetop {
   .navbar {
-    // background-color: rgba($palet-1, 1);
-
     h1 a {
       color: $white;
     }
@@ -1401,9 +1443,9 @@ body#sitetop {
   }
 
   .navbar-nav li {
-     &.active > a,
-    &.force-active > a,
-    > a:hover {
+     > a:hover,
+    &.active > a,
+    &.force-active > a {
       background-color: $palet-3;
       color: $palet-1;
     }
@@ -1412,6 +1454,7 @@ body#sitetop {
 }
 
 #mainvisual {
+  position: relative;
   padding: 150px 0 50px;
   min-height: 400px;
   width: 100%;
@@ -1449,28 +1492,29 @@ body#sitetop {
     .countdown-clock {
       margin-bottom: 20px;
       color: $white;
+      font-weight: 100;
       font-family: 'Lato', sans-serif;
-        @media (max-width: $screen-xs-max) {
-          // margin-right: 5px;
-          // margin-left: 5px;
-        }
+      // @media(max-width:$screen-xs-max) {
+      //   // margin-right: 5px;
+      //   // margin-left: 5px;
+      // }
 
       .countdown-clock-display {
         display: inline-block;
         margin-right: 20px;
         margin-left: 20px;
-        @media (max-width: $screen-xs-max) {
-          margin-right: 5px;
-          margin-left: 5px;
-        }
+        // @media (max-width: $screen-xs-max) {
+        //   margin-right: 5px;
+        //   margin-left: 5px;
+        // }
 
         .countdown-clock-number {
           font-size: 80px;
           line-height: 1;
-          @media (max-width: $screen-xs-max) {
-            font-size: 35px;
-            font-weight: bold;
-          }
+          // @media (max-width: $screen-xs-max) {
+          //   font-weight: bold;
+          //   font-size: 35px;
+          // }
         }
 
         .countdown-clock-label {
@@ -1478,6 +1522,74 @@ body#sitetop {
         }
       }
     }
+  }
+
+  .mainvisual-hashtag {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+
+    @include animation-name(c);
+    @include animation-duration(2s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-delay(0);
+    @include animation-iteration-count(infinite);
+    @include animation-direction(alternate);
+
+    img {
+      @include animation-name(d);
+      @include animation-duration(2s);
+      @include animation-timing-function(ease-in-out);
+      @include animation-delay(0);
+      @include animation-iteration-count(infinite);
+      @include animation-direction(alternate);
+    }
+  }
+}
+@keyframes c {
+  0% {
+    @include translate(-5px, 0);
+  }
+
+  to {
+    @include translate(0, 0);
+  }
+}
+@keyframes d {
+  0% {
+    @include translate(0, -10px);
+  }
+
+  to {
+    @include translate(0, 0);
+  }
+}
+@media (max-width: 767px) {
+  #mainvisual {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 767px) {
+  #mainvisual #countdown .countdown-clock {
+    font-weight: 300;
+  }
+}
+@media (max-width: 767px) {
+  #mainvisual #countdown .countdown-clock .countdown-clock-display {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+@media (max-width: 767px) {
+  #mainvisual #countdown .countdown-clock .countdown-clock-display .countdown-clock-number {
+    font-weight: 700;
+    font-size: 35px;
+  }
+}
+@media (max-width: 767px) {
+  #mainvisual .mainvisual-hashtag {
+    top: 5%;
+    right: 5%;
   }
 }
 
@@ -2139,7 +2251,7 @@ table {
 
         &:after {
           right: auto;
-          left: -14px;
+          left: -12px;
           border-right-width: 14px;
           border-left-width: 0;
         }
