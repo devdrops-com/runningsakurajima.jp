@@ -900,12 +900,6 @@ $table-border-color: $palet-1;
 /* ------------------------------------------
                   COMMON
 ------------------------------------------ */
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: "28-Segment LED DisplayRegular";
-  src: url("#{$icon-font-path}28-Segment_LED_DisplayRegular.eot?") format("eot"), url("#{$icon-font-path}28-Segment_LED_DisplayRegular.woff") format("woff"), url("#{$icon-font-path}28-Segment_LED_DisplayRegular.ttf") format("truetype"), url("#{$icon-font-path}28-Segment_LED_DisplayRegular.svg#28-SegmentLEDDisplay") format("svg");
-}
 
 body {
   position: relative;
