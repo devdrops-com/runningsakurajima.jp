@@ -75,7 +75,15 @@
 // 共通
 (function() {
   'use strict';
-  $('body').scrollspy({target: '#global-navigation', offset: 100});
+  // $('body').scrollspy({target: '#global-navigation', offset: 100});
+  // このページの先頭に戻る
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 100) {
+      $('#return-pagetop').fadeIn('slow');
+    } else {
+      $('#return-pagetop').fadeOut('slow');
+    }
+  });
   // パネルをトグル化
   $('.panel.panel-toggle .panel-heading').on('click', function() {
     $(this).toggleClass('is-close');

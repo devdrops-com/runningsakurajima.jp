@@ -1039,7 +1039,7 @@ img {
     }
   }
 }
-@media (max-width: 767px) {
+@media (max-width: $screen-xs-max) {
   .navbar-collapse .header-socialbtn {
     float: none;
     padding: 0;
@@ -1048,6 +1048,7 @@ img {
 }
 
 #return-pagetop {
+  display: none;
   position: fixed;
   right: 20px;
   bottom: 50px;
@@ -1061,42 +1062,45 @@ footer {
     padding: 40px 0;
     background: $palet-1;
     color: $white;
-  }
-
-  #footer-menu {
-    .footer-menu-title {
-      font-size: 15px;
+    @media (max-width: $screen-xs-max) {
+      display: none;
     }
 
-    .footer-menu-toppage {
-      > li {
-        display: inline-block;
-        width: 45%;
+    #footer-menu {
+      .footer-menu-title {
+        font-size: 15px;
       }
-    }
 
-    ul {
-      margin-bottom: 0;
-      list-style-type: none;
-      line-height: 2;
-
-      > li {
-        position: relative;
-
-        &:before {
-          position: absolute;
-          top: 0;
-          left: -1.5em;
-          display: block;
-          width: 1em;
-          color: $white;
-          content: '\f105';
-          text-align: center;
-          font-family: FontAwesome;
+      .footer-menu-toppage {
+        > li {
+          display: inline-block;
+          width: 45%;
         }
+      }
 
-        > a {
-          color: $white;
+      ul {
+        margin-bottom: 0;
+        list-style-type: none;
+        line-height: 2;
+
+        > li {
+          position: relative;
+
+          &:before {
+            position: absolute;
+            top: 0;
+            left: -1.5em;
+            display: block;
+            width: 1em;
+            color: $white;
+            content: '\f105';
+            text-align: center;
+            font-family: FontAwesome;
+          }
+
+          > a {
+            color: $white;
+          }
         }
       }
     }
@@ -1523,8 +1527,8 @@ body#sitetop {
 
   .mainvisual-hashtag {
     position: absolute;
-    top: 50%;
-    right: 10%;
+    top: 15%;
+    right: 0%;
     @include animation-name(c);
     @include animation-duration(2s);
     @include animation-timing-function(ease-in-out);
@@ -1560,32 +1564,24 @@ body#sitetop {
     @include translate(0, 0);
   }
 }
-@media (max-width: 767px) {
+@media (max-width: $screen-xs-max) {
   #mainvisual {
     padding-top: 80px;
-  }
-}
-@media (max-width: 767px) {
-  #mainvisual #countdown .countdown-clock {
-    font-weight: 300;
-  }
-}
-@media (max-width: 767px) {
-  #mainvisual #countdown .countdown-clock .countdown-clock-display {
-    margin-right: 5px;
-    margin-left: 5px;
-  }
-}
-@media (max-width: 767px) {
-  #mainvisual #countdown .countdown-clock .countdown-clock-display .countdown-clock-number {
-    font-weight: 700;
-    font-size: 35px;
-  }
-}
-@media (max-width: 767px) {
-  #mainvisual .mainvisual-hashtag {
-    top: 5%;
-    right: 5%;
+    #countdown .countdown-clock {
+      font-weight: 300;
+      .countdown-clock-display {
+        margin-right: 5px;
+        margin-left: 5px;
+        .countdown-clock-number {
+          font-weight: 700;
+          font-size: 35px;
+        }
+      }
+    }
+    .mainvisual-hashtag {
+      top: 5%;
+      right: 5%;
+    }
   }
 }
 
@@ -1808,7 +1804,8 @@ table {
 
     small {
       display: block;
-      margin-top: 0.5em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
   }
 
@@ -1875,7 +1872,7 @@ table {
 /* ------------------------------------------
                STYLE FOR TABLET
 ------------------------------------------ */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $screen-xs-max) {
   img {
     max-width: 100%;
   }
@@ -1985,7 +1982,7 @@ table {
 /* ------------------------------------------
                   for sp
 ------------------------------------------ */
-@media (max-width: 768px) {
+@media (max-width: $screen-xs-max) {
   #entry-list figure {
     display: none;
   }
@@ -2197,12 +2194,12 @@ table {
 }
 
 /** media queries **/
-@media (max-width: 991px) {
+@media (max-width: $screen-md-max) {
   .timeline li .timeline-panel {
     width: 44%;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: $screen-xs-max) {
   .page-header h1 {
     font-size: 1.8em;
   }
