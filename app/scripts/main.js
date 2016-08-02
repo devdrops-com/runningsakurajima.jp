@@ -107,7 +107,8 @@
   });
   // ニュースのサムネイルの高さを揃える
   if ($(window).width() >= 992) {
-    $('#top-news .col-sm-3 a').tile(4);
+    // $('#top-news [class^="col-] > a').tile(4);
+    $('#top-news [class^="col-sm"] > a').tile(4);
   }
   // スマートフォンの時のグローバルナビゲーションの動き
   var $body = $('body');
