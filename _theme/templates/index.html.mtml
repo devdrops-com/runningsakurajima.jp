@@ -76,21 +76,23 @@
       <h3>ニュース <small>news</small></h3>
       <div class="row">
         <mt:Entries lastn="4">
-          <a href="<mt:EntryPermalink>" class="col-sm-3">
-            <mt:If tag="CustomFieldValue" identifier="main_image_entry">
-               <figure><img src="<mt:CustomFieldAsset identifier="main_image_entry"><mt:AssetThumbnailURL width="320"></mt:CustomFieldAsset>" alt="<mt:EntryTitle>"></figure>
-            <mt:Else>
-              <mt:EntryAssets type="image" sort_order="ascend" limit="1">
-                <figure><img src="<mt:AssetThumbnailURL width="320">" alt="<mt:EntryTitle>"></figure>
+          <div class="col-sm-6 col-md-3">
+            <a href="<mt:EntryPermalink>">
+              <mt:If tag="CustomFieldValue" identifier="main_image_entry">
+                 <figure><img src="<mt:CustomFieldAsset identifier="main_image_entry"><mt:AssetThumbnailURL width="320"></mt:CustomFieldAsset>" alt="<mt:EntryTitle>"></figure>
               <mt:Else>
-                <figure class="noimage"><span>No image</span></figure>
-              </mt:EntryAssets>
-            </mt:If>
-            <div class="entry-detail">
-              <h4><mt:EntryTitle encode_html="1"></h4>
-              <p class="entry-excerpt"><mt:EntryExcerpt></p>
-            </div>
-          </a>
+                <mt:EntryAssets type="image" sort_order="ascend" limit="1">
+                  <figure><img src="<mt:AssetThumbnailURL width="320">" alt="<mt:EntryTitle>"></figure>
+                <mt:Else>
+                  <figure class="noimage"><span>No image</span></figure>
+                </mt:EntryAssets>
+              </mt:If>
+              <div class="entry-detail">
+                <h4><mt:EntryTitle encode_html="1"></h4>
+                <p class="entry-excerpt"><mt:EntryExcerpt></p>
+              </div>
+            </a>
+          </div>
         </mt:Entries>
       </div>
     </div>

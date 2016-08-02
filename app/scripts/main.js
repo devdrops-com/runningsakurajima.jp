@@ -106,7 +106,9 @@
     $(this).addClass('disabled');
   });
   // ニュースのサムネイルの高さを揃える
-  $('#top-news .col-sm-3').tile(4);
+  if ($(window).width() >= 992) {
+    $('#top-news .col-sm-3 a').tile(4);
+  }
   // スマートフォンの時のグローバルナビゲーションの動き
   var $body = $('body');
   $('#return-pagetop a').smoothScroll();
