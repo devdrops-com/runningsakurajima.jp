@@ -14,6 +14,7 @@ elements:
       - images
       - scripts
       - styles
+      - google3473f89caf5ac718.html
     importer: blog_static_files
   custom_fields:
     component: commercial
