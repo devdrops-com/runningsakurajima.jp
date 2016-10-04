@@ -71,7 +71,15 @@
         <aside id="footer-ad">
           <div class="row">
       </mt:AssetsHeader>
-      <div class="col-xs-3"><a href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a></div>
+      <div class="col-xs-3">
+        <mt:If tag="CustomFieldValue" identifier="NcImageLinkUrl">
+          <a href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank">
+        </mt:If>
+        <img src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>">
+        <mt:If tag="CustomFieldValue" identifier="NcImageLinkUrl">
+          </a>
+        </mt:If>
+      </div>
       <mt:AssetsFooter>
           </div>
         </aside>

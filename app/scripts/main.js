@@ -122,4 +122,12 @@
       $body.removeClass('smooth-scroll-scrolling');
     }
   });
+  function shuffleContent(container) {
+    var content = container.find('> *');
+    var total = content.length;
+    content.each(function() {
+      content.eq(Math.floor(Math.random() * total)).prependTo(container);
+    });
+  }
+  shuffleContent($('#footer-ad > .row'));
 })();
